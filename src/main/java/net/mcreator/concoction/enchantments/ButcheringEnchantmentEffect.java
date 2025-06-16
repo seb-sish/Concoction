@@ -16,17 +16,6 @@ public record ButcheringEnchantmentEffect() implements EnchantmentEntityEffect {
 
     @Override
     public void apply(ServerLevel serverLevel, int enchantLevel, EnchantedItemInUse enchantedItemInUse, Entity entity, Vec3 vec3) {
-        // Получаем информацию о целях атаки
-        String entityName = entity.getName().getString();
-        String entityType = entity.getType().getDescriptionId();
-        float entityHealth = entity instanceof LivingEntity living ? living.getHealth() : 0;
-        
-        // Выводим подробную информацию о срабатывании зачарования
-        ConcoctionMod.LOGGER.info("Butchering enchantment activated (Level " + enchantLevel + ")!");
-        ConcoctionMod.LOGGER.info("Target: " + entityName + " (" + entityType + ")");
-        if (entity instanceof LivingEntity) {
-            ConcoctionMod.LOGGER.info("Target health: " + entityHealth);
-        }
     }
 
     @Override

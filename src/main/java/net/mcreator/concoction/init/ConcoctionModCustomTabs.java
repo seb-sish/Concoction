@@ -1,6 +1,7 @@
 package net.mcreator.concoction.init;
 
 import net.mcreator.concoction.ConcoctionMod;
+import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -187,14 +188,17 @@ public class ConcoctionModCustomTabs {
 //Деревья
 //Зачарования
 
-				for (int i = 1; i<=4; i++) {
-					ResourceKey<Enchantment> butcheringKey = ConcoctionModEnchantments.BUTCHERING;
-					var butcheringEntry = parameters.holders().holder(butcheringKey);
-					if (butcheringEntry != null && butcheringEntry.isPresent()) {
-						EnchantmentInstance enchantmentInstance = new EnchantmentInstance(butcheringEntry.get(), i);
-						tabData.accept(EnchantedBookItem.createForEnchantment(enchantmentInstance));
-					}
-				}
+// Получаем зачарование Butchering из реестра
+var butcheringEntry = parameters.holders().holder(ConcoctionModEnchantments.BUTCHERING);
+if (butcheringEntry != null && butcheringEntry.isPresent()) {
+    Enchantment butchering = butcheringEntry.get().value();
+    // Получаем максимальный уровень зачарования из его определения
+    int maxLevel = butchering.getMaxLevel();
+    // Создаем книги для каждого уровня
+    for (int level = 1; level <= maxLevel; level++) {
+        tabData.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(Holder.direct(butchering), level)));
+    }
+}
 
 //Инструменты, оружие, броня
 				tabData.accept(ConcoctionModItems.OVERGROWN_SHOVEL.get());

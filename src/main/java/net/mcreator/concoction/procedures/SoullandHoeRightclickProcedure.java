@@ -38,9 +38,15 @@ public class SoullandHoeRightclickProcedure {
 	@SubscribeEvent
 	public static void onUseHoe(BlockEvent.BlockToolModificationEvent event) {
 
-		ItemStack itemStack = Objects.requireNonNull(event.getPlayer()).getItemInHand(InteractionHand.MAIN_HAND);
-		ItemStack itemStack2 = Objects.requireNonNull(event.getPlayer()).getItemInHand(InteractionHand.OFF_HAND);
+		ItemStack itemStack;
+		ItemStack itemStack2;
 
+		try {
+			itemStack = Objects.requireNonNull(event.getPlayer()).getItemInHand(InteractionHand.MAIN_HAND);
+			itemStack2 = Objects.requireNonNull(event.getPlayer()).getItemInHand(InteractionHand.OFF_HAND);
+		} catch (NullPointerException e) {
+			return;
+		}
 		if ( itemStack.getItem() instanceof OvergrownHoeItem item) {
 			if (item.getDamage(itemStack) >= item.getMaxDamage(itemStack) - 1) {
 				event.setCanceled(true);
