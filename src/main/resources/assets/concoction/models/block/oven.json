@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "concoction:block/oven_bottom",
+    "up": "concoction:block/oven_top",
+    "north": "concoction:block/oven_front",
+    "east": "concoction:block/oven_side",
+    "south": "concoction:block/oven_side",
+    "west": "concoction:block/oven_side2",
+    "particle": "concoction:block/oven_bottom"
+  },
+  "render_type": "solid"
+}

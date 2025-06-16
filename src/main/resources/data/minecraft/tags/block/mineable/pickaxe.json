@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "concoction:oven",
     "concoction:soul_ice"
   ]
 }

@@ -221,6 +221,7 @@ public class ConcoctionModItems {
 	public static final DeferredItem<Item> GLOWBERRY_CAKE_SLICE = REGISTRY.register("glowberry_cake_slice", GlowberryCakeSliceItem::new);
 	public static final DeferredItem<Item> CARROT_CAKE_SLICE = REGISTRY.register("carrot_cake_slice", CarrotCakeSliceItem::new);
 	public static final DeferredItem<Item> PUMPKIN_PIE_SLICE = REGISTRY.register("pumpkin_pie_slice", PumpkinPieSliceItem::new);
+	public static final DeferredItem<Item> OVEN = block(ConcoctionModBlocks.OVEN);
 	// Start of user code block custom items
 	public static final DeferredItem<Item> CHERRY_CAKE = block(ConcoctionModBlocks.CHERRY_CAKE);
 	public static final DeferredItem<Item> GLOWBERRY_CAKE = block(ConcoctionModBlocks.GLOWBERRY_CAKE);
