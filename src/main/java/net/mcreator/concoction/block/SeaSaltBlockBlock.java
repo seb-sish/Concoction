@@ -11,14 +11,14 @@ import net.minecraft.core.BlockPos;
 
 import com.mojang.serialization.MapCodec;
 
-public class SeaSaltSandBlock extends FallingBlock {
-	public static final MapCodec<SeaSaltSandBlock> CODEC = simpleCodec(properties -> new SeaSaltSandBlock());
+public class SeaSaltBlockBlock extends FallingBlock {
+	public static final MapCodec<SeaSaltBlockBlock> CODEC = simpleCodec(properties -> new SeaSaltBlockBlock());
 
-	public MapCodec<SeaSaltSandBlock> codec() {
+	public MapCodec<SeaSaltBlockBlock> codec() {
 		return CODEC;
 	}
 
-	public SeaSaltSandBlock() {
+	public SeaSaltBlockBlock() {
 		super(BlockBehaviour.Properties.of().mapColor(MapColor.SNOW).sound(SoundType.SAND).strength(0.4f, 0.5f));
 	}
 

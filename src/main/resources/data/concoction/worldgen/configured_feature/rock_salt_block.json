@@ -1,16 +1,16 @@
 {
   "type": "minecraft:ore",
   "config": {
-    "size": 32,
+    "size": 48,
     "discard_chance_on_air_exposure": 0,
     "targets": [
       {
         "target": {
           "predicate_type": "tag_match",
-          "tag": "minecraft:mineable/shovel"
+          "tag": "stone_ore_replaceables"
         },
         "state": {
-          "Name": "concoction:sea_salt_sand"
+          "Name": "concoction:rock_salt_block"
         }
       }
     ]

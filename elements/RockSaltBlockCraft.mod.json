@@ -4,7 +4,7 @@
   "definition": {
     "recipeType": "Crafting",
     "recipeRetstackSize": 1,
-    "group": "sea_salt_block",
+    "group": "rock_salt_block",
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
     "cookingTime": 200,
@@ -12,19 +12,19 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "CUSTOM:SeaSalt"
+        "value": "CUSTOM:RockSalt"
       },
       {
-        "value": "CUSTOM:SeaSalt"
+        "value": "CUSTOM:RockSalt"
       },
       {
         "value": ""
       },
       {
-        "value": "CUSTOM:SeaSalt"
+        "value": "CUSTOM:RockSalt"
       },
       {
-        "value": "CUSTOM:SeaSalt"
+        "value": "CUSTOM:RockSalt"
       },
       {
         "value": ""
@@ -40,9 +40,9 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:SeaSaltBlock"
+      "value": "CUSTOM:RockSaltBlock"
     },
-    "name": "sea_salt_block_craft",
+    "name": "rock_salt_block_craft",
     "namespace": "mod"
   }
 }

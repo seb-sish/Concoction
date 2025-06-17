@@ -28,6 +28,7 @@ import net.mcreator.concoction.item.SunflowerCrownItem;
 import net.mcreator.concoction.item.SpicyPepperItem;
 import net.mcreator.concoction.item.SeaSaltItem;
 import net.mcreator.concoction.item.SalmonSushiItem;
+import net.mcreator.concoction.item.RockSaltItem;
 import net.mcreator.concoction.item.RoastedSunflowerSeedsItem;
 import net.mcreator.concoction.item.RoastedPineconeItem;
 import net.mcreator.concoction.item.ReapperItem;
@@ -206,7 +207,6 @@ public class ConcoctionModItems {
 	public static final DeferredItem<Item> REAPEPPER_BLOCK = block(ConcoctionModBlocks.REAPEPPER_BLOCK);
 	public static final DeferredItem<Item> CHERRY_BLOCK = block(ConcoctionModBlocks.CHERRY_BLOCK);
 	public static final DeferredItem<Item> SEA_SALT = REGISTRY.register("sea_salt", SeaSaltItem::new);
-	public static final DeferredItem<Item> SEA_SALT_SAND = block(ConcoctionModBlocks.SEA_SALT_SAND);
 	public static final DeferredItem<Item> SWEET_BERRIES_BLOCK = block(ConcoctionModBlocks.SWEET_BERRIES_BLOCK);
 	public static final DeferredItem<Item> BEETROOT_BLOCK = block(ConcoctionModBlocks.BEETROOT_BLOCK);
 	public static final DeferredItem<Item> CARROT_BLOCK = block(ConcoctionModBlocks.CARROT_BLOCK);
@@ -222,6 +222,9 @@ public class ConcoctionModItems {
 	public static final DeferredItem<Item> CARROT_CAKE_SLICE = REGISTRY.register("carrot_cake_slice", CarrotCakeSliceItem::new);
 	public static final DeferredItem<Item> PUMPKIN_PIE_SLICE = REGISTRY.register("pumpkin_pie_slice", PumpkinPieSliceItem::new);
 	public static final DeferredItem<Item> OVEN = block(ConcoctionModBlocks.OVEN);
+	public static final DeferredItem<Item> SEA_SALT_BLOCK = block(ConcoctionModBlocks.SEA_SALT_BLOCK);
+	public static final DeferredItem<Item> ROCK_SALT_BLOCK = block(ConcoctionModBlocks.ROCK_SALT_BLOCK);
+	public static final DeferredItem<Item> ROCK_SALT = REGISTRY.register("rock_salt", RockSaltItem::new);
 	// Start of user code block custom items
 	public static final DeferredItem<Item> CHERRY_CAKE = block(ConcoctionModBlocks.CHERRY_CAKE);
 	public static final DeferredItem<Item> GLOWBERRY_CAKE = block(ConcoctionModBlocks.GLOWBERRY_CAKE);

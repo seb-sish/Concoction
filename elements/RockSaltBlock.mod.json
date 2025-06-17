@@ -2,7 +2,7 @@
   "_fv": 73,
   "_type": "block",
   "definition": {
-    "texture": "sea_salt_block",
+    "texture": "rock_salt_block",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -34,26 +34,26 @@
       }
     ],
     "customProperties": [],
-    "name": "Sea Salt Block",
+    "name": "Rock Salt Block",
     "specialInformation": {
       "fixedValue": []
     },
-    "hardness": 0.4,
-    "resistance": 0.5,
-    "hasGravity": true,
+    "hardness": 1.5,
+    "resistance": 4.0,
+    "hasGravity": false,
     "isWaterloggable": false,
     "creativeTabs": [],
-    "destroyTool": "shovel",
+    "destroyTool": "pickaxe",
     "customDrop": {
       "value": ""
     },
     "dropAmount": 1,
-    "useLootTableForDrops": true,
-    "requiresCorrectTool": false,
+    "useLootTableForDrops": false,
+    "requiresCorrectTool": true,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
-    "lightOpacity": 15,
+    "lightOpacity": 0,
     "material": {
       "value": "NONE"
     },
@@ -64,12 +64,16 @@
     "emittedRedstonePower": {
       "fixedValue": 15.0
     },
-    "colorOnMap": "SNOW",
+    "colorOnMap": "ADOBE",
     "creativePickItem": {
       "value": ""
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
+    "beaconColorModifier": {
+      "value": -26266,
+      "falpha": 0.0
+    },
     "flammability": 0,
     "fireSpreadSpeed": 0,
     "isLadder": false,
@@ -80,7 +84,7 @@
     "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "SAND"
+      "value": "STONE"
     },
     "breakSound": {
       "value": ""
@@ -120,17 +124,47 @@
     "generateFeature": true,
     "restrictionBiomes": [
       {
-        "value": "#minecraft:is_deep_ocean"
+        "value": "desert"
+      },
+      {
+        "value": "badlands"
+      },
+      {
+        "value": "mutated_mesa"
+      },
+      {
+        "value": "wooded_badlands_plateau"
+      },
+      {
+        "value": "savanna"
+      },
+      {
+        "value": "savanna_rock"
+      },
+      {
+        "value": "mutated_savanna"
+      },
+      {
+        "value": "stony_peaks"
+      },
+      {
+        "value": "bamboo_jungle"
+      },
+      {
+        "value": "jungle"
+      },
+      {
+        "value": "jungle_edge"
       }
     ],
     "blocksToReplace": [
       {
-        "value": "TAG:minecraft:mineable/shovel"
+        "value": "TAG:stone_ore_replaceables"
       }
     ],
-    "generationShape": "TRIANGLE",
+    "generationShape": "UNIFORM",
     "frequencyPerChunks": 3,
-    "frequencyOnChunk": 32,
+    "frequencyOnChunk": 48,
     "minGenerateHeight": 32,
     "maxGenerateHeight": 64
   }

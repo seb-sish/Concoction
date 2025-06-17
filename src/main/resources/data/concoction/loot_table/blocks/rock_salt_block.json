@@ -26,7 +26,7 @@
                   }
                 }
               ],
-              "name": "concoction:sea_salt_sand"
+              "name": "concoction:rock_salt_block"
             },
             {
               "type": "minecraft:item",
@@ -40,7 +40,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "concoction:sea_salt"
+              "name": "concoction:rock_salt"
             }
           ]
         }
@@ -48,5 +48,5 @@
       "rolls": 1
     }
   ],
-  "random_sequence": "concoction:blocks/sea_salt_sand"
+  "random_sequence": "concoction:blocks/rock_salt_block"
 }

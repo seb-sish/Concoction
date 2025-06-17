@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "concoction:sea_salt"
+    "concoction:sea_salt",
+    "concoction:rock_salt"
   ]
 }
