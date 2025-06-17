@@ -117,17 +117,21 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "generateFeature": false,
-    "restrictionBiomes": [],
+    "generateFeature": true,
+    "restrictionBiomes": [
+      {
+        "value": "#minecraft:is_deep_ocean"
+      }
+    ],
     "blocksToReplace": [
       {
         "value": "TAG:minecraft:mineable/shovel"
       }
     ],
-    "generationShape": "UNIFORM",
-    "frequencyPerChunks": 28,
-    "frequencyOnChunk": 28,
+    "generationShape": "TRIANGLE",
+    "frequencyPerChunks": 3,
+    "frequencyOnChunk": 32,
     "minGenerateHeight": 32,
-    "maxGenerateHeight": 62
+    "maxGenerateHeight": 64
   }
 }
