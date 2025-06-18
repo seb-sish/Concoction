@@ -16,32 +16,12 @@
     },
     {
       "item": "concoction:cream_bottle"
-    },
-    {
-      "item": "concoction:cream_bottle"
-    },
-    {
-      "item": "concoction:cream_bottle"
-    },
-    {
-      "item": "concoction:cream_bottle"
-    },
-    {
-      "item": "concoction:cream_bottle"
-    },
-    {
-      "item": "concoction:cream_bottle"
-    },
-    {
-      "item": "concoction:cream_bottle"
     }
-
-
   ],
 
   "result": {
     "id": "concoction:butter",
     "interactionType": "hand",
-    "count": "4"
+    "count": "1"
   }
 }

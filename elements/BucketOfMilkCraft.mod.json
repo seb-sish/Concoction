@@ -3,8 +3,8 @@
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
-    "recipeRetstackSize": 4,
-    "group": "dough",
+    "recipeRetstackSize": 1,
+    "group": "bucket_of_milk",
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
     "cookingTime": 200,
@@ -12,19 +12,19 @@
     "recipeShapeless": true,
     "recipeSlots": [
       {
-        "value": "Blocks.WHEAT"
+        "value": "Items.BUCKET"
       },
       {
-        "value": "TAG:c:salts"
+        "value": "CUSTOM:MilkBottle"
       },
       {
         "value": ""
       },
       {
-        "value": "Blocks.WHEAT"
+        "value": "CUSTOM:MilkBottle"
       },
       {
-        "value": "Items.EGG"
+        "value": "CUSTOM:MilkBottle"
       },
       {
         "value": ""
@@ -40,9 +40,9 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Dough"
+      "value": "Items.MILK_BUCKET"
     },
-    "name": "dough_craft",
+    "name": "bucket_of_milk_craft",
     "namespace": "mod"
   }
 }

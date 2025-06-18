@@ -3,8 +3,8 @@
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
-    "recipeRetstackSize": 4,
-    "group": "dough",
+    "recipeRetstackSize": 3,
+    "group": "milk_bottle",
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
     "cookingTime": 200,
@@ -12,19 +12,19 @@
     "recipeShapeless": true,
     "recipeSlots": [
       {
-        "value": "Blocks.WHEAT"
+        "value": "Items.MILK_BUCKET"
       },
       {
-        "value": "Blocks.WHEAT"
+        "value": "Items.GLASS_BOTTLE"
       },
       {
         "value": ""
       },
       {
-        "value": "Blocks.WHEAT"
+        "value": "Items.GLASS_BOTTLE"
       },
       {
-        "value": "Items.WATER_BUCKET"
+        "value": "Items.GLASS_BOTTLE"
       },
       {
         "value": ""
@@ -40,9 +40,9 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Dough"
+      "value": "CUSTOM:MilkBottle"
     },
-    "name": "dough_craft_2",
+    "name": "milk_bottle_craft",
     "namespace": "mod"
   }
 }

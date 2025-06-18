@@ -51,6 +51,7 @@ import net.mcreator.concoction.item.MintySlimeJellyItem;
 import net.mcreator.concoction.item.MintCookieItem;
 import net.mcreator.concoction.item.MintChocolateCakeSliceItem;
 import net.mcreator.concoction.item.MintBrewItem;
+import net.mcreator.concoction.item.MilkBottleItem;
 import net.mcreator.concoction.item.MeatGoulashItem;
 import net.mcreator.concoction.item.MashedPotatoesItem;
 import net.mcreator.concoction.item.LingonberryCakeSliceItem;
@@ -66,6 +67,7 @@ import net.mcreator.concoction.item.FriedEggItem;
 import net.mcreator.concoction.item.FishAndChipsItem;
 import net.mcreator.concoction.item.FabricItem;
 import net.mcreator.concoction.item.DoughItem;
+import net.mcreator.concoction.item.CreamBottleItem;
 import net.mcreator.concoction.item.CottonOilItem;
 import net.mcreator.concoction.item.CornSoupItem;
 import net.mcreator.concoction.item.CornOilItem;
@@ -225,6 +227,8 @@ public class ConcoctionModItems {
 	public static final DeferredItem<Item> SEA_SALT_BLOCK = block(ConcoctionModBlocks.SEA_SALT_BLOCK);
 	public static final DeferredItem<Item> ROCK_SALT_BLOCK = block(ConcoctionModBlocks.ROCK_SALT_BLOCK);
 	public static final DeferredItem<Item> ROCK_SALT = REGISTRY.register("rock_salt", RockSaltItem::new);
+	public static final DeferredItem<Item> MILK_BOTTLE = REGISTRY.register("milk_bottle", MilkBottleItem::new);
+	public static final DeferredItem<Item> CREAM_BOTTLE = REGISTRY.register("cream_bottle", CreamBottleItem::new);
 	// Start of user code block custom items
 	public static final DeferredItem<Item> CHERRY_CAKE = block(ConcoctionModBlocks.CHERRY_CAKE);
 	public static final DeferredItem<Item> GLOWBERRY_CAKE = block(ConcoctionModBlocks.GLOWBERRY_CAKE);

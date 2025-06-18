@@ -58,6 +58,8 @@ public class ConcoctionModCustomTabs {
 				tabData.accept(ConcoctionModItems.ANIMAL_FAT.get());
 				tabData.accept(ConcoctionModItems.DOUGH.get());
 				tabData.accept(ConcoctionModItems.RAW_NOODLES.get());
+				tabData.accept(ConcoctionModItems.MILK_BOTTLE.get());
+				tabData.accept(ConcoctionModItems.CREAM_BOTTLE.get());
 				tabData.accept(ConcoctionModItems.HOT_SAUCE_BOTTLE.get());
 				tabData.accept(ConcoctionModItems.SUNFLOWER_OIL.get());
 				tabData.accept(ConcoctionModItems.CORN_OIL.get());

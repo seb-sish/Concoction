@@ -1,23 +1,23 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "dough",
+  "group": "bucket_of_milk",
   "category": "misc",
   "ingredients": [
     {
-      "item": "minecraft:wheat"
+      "item": "minecraft:bucket"
     },
     {
-      "tag": "c:salts"
+      "item": "concoction:milk_bottle"
     },
     {
-      "item": "minecraft:wheat"
+      "item": "concoction:milk_bottle"
     },
     {
       "item": "concoction:milk_bottle"
     }
   ],
   "result": {
-    "id": "concoction:dough",
-    "count": 4
+    "id": "minecraft:milk_bucket",
+    "count": 1
   }
 }
