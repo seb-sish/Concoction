@@ -5613,22 +5613,6 @@
       "path": "~/salt"
     },
     {
-      "name": "SeaSaltSand",
-      "type": "block",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sea_salt_sand",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/concoction/models/block/sea_salt_sand.json",
-          "src/main/resources/assets/concoction/blockstates/sea_salt_sand.json",
-          "src/main/resources/assets/concoction/models/item/sea_salt_sand.json",
-          "src/main/java/net/mcreator/concoction/block/SeaSaltSandBlock.java"
-        ]
-      },
-      "path": "~/salt"
-    },
-    {
       "name": "SweetBerriesBlock",
       "type": "block",
       "compiles": true,
@@ -6251,6 +6235,72 @@
         ]
       },
       "path": "~/oven"
+    },
+    {
+      "name": "SeaSaltBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "sea_salt_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/concoction/blockstates/sea_salt_block.json",
+          "src/main/resources/data/concoction/neoforge/biome_modifier/sea_salt_block_biome_modifier.json",
+          "src/main/resources/data/concoction/worldgen/configured_feature/sea_salt_block.json",
+          "src/main/resources/assets/concoction/models/block/sea_salt_block.json",
+          "src/main/resources/data/concoction/worldgen/placed_feature/sea_salt_block.json",
+          "src/main/java/net/mcreator/concoction/block/SeaSaltBlockBlock.java",
+          "src/main/resources/assets/concoction/models/item/sea_salt_block.json"
+        ]
+      },
+      "path": "~/salt"
+    },
+    {
+      "name": "RockSaltBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "rock_salt_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/concoction/block/RockSaltBlockBlock.java",
+          "src/main/resources/assets/concoction/models/block/rock_salt_block.json",
+          "src/main/resources/data/concoction/neoforge/biome_modifier/rock_salt_block_biome_modifier.json",
+          "src/main/resources/assets/concoction/blockstates/rock_salt_block.json",
+          "src/main/resources/data/concoction/worldgen/configured_feature/rock_salt_block.json",
+          "src/main/resources/assets/concoction/models/item/rock_salt_block.json",
+          "src/main/resources/data/concoction/loot_table/blocks/rock_salt_block.json",
+          "src/main/resources/data/concoction/worldgen/placed_feature/rock_salt_block.json"
+        ]
+      },
+      "path": "~/salt"
+    },
+    {
+      "name": "RockSalt",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rock_salt",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/concoction/models/item/rock_salt.json",
+          "src/main/java/net/mcreator/concoction/item/RockSaltItem.java"
+        ]
+      },
+      "path": "~/salt"
+    },
+    {
+      "name": "RockSaltBlockCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rock_salt_block_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/concoction/recipe/rock_salt_block_craft.json"
+        ]
+      },
+      "path": "~/salt"
     }
   ],
   "variable_elements": [],
@@ -6387,7 +6437,8 @@
       "CUSTOM:Soulland"
     ],
     "ITEMS:c:salts": [
-      "CUSTOM:SeaSalt"
+      "CUSTOM:SeaSalt",
+      "CUSTOM:RockSalt"
     ],
     "ITEMS:mod:woven_carpets": [
       "CUSTOM:WhiteWovenCarpet",
@@ -6557,11 +6608,12 @@
       "CUSTOM:NetherPepperCrop"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:RockSaltBlock",
       "~CUSTOM:Oven",
       "~CUSTOM:SoulIce"
     ],
     "BLOCKS:minecraft:mineable/shovel": [
-      "~CUSTOM:SeaSaltSand",
+      "~CUSTOM:SeaSaltBlock",
       "~CUSTOM:SoakedRiceBlock",
       "~CUSTOM:RiceBlock",
       "~CUSTOM:Soulland"
@@ -6688,12 +6740,12 @@
       "subtitles.soul_bucket_filled": "Ведро наполнено душами",
       "death.attack.spicy_damage.player": "%1$s был отжарен %2$s",
       "subtitles.butter_churn_spin": "Маслобойка крутится",
-      "block.concoction.sea_salt_sand": "Песок морской соли",
       "effect.concoction.sweetness": "Сладость",
       "item.minecraft.lingering_potion.effect.blooming_buffed": "Оседающие зелье цветения",
       "advancements.spicy_remove_many_debuffs.title": "Синьор Помидор",
       "item.concoction.cherry_cookie": "Вишнёвое печенье",
       "block.concoction.small_black_pillow_block": "Маленькая чёрная подушка",
+      "block.concoction.sea_salt_block": "Блок морской соли",
       "advancements.fall_pillow.descr": "Упади на подушку с высоты более ста блоков",
       "death.attack.soul_damage": "%1$s слился с душами",
       "block.concoction.orange_woven_carpet": "Оранжевый тканый ковёр",
@@ -6784,6 +6836,7 @@
       "block.concoction.black_pillow_block": "Чёрная подушка",
       "item.concoction.spicy_pepper": "Жгучий перец",
       "advancements.nether_mutation.title": "Тепло, но не очень",
+      "block.concoction.rock_salt_block": "Блок каменной соли",
       "gui.butter_churn.chance": "20%",
       "block.concoction.magenta_woven_carpet": "Пурпурный тканый ковёр",
       "item.concoction.bamboo_porkchop_soup": "Свиной суп с бамбуком",
@@ -6865,6 +6918,7 @@
       "advancements.sapling_from_item.title": "Биоразлагаемость",
       "item.minecraft.lingering_potion.effect.flame": "Оседающее зелье жжения",
       "block.concoction.carrot_block": "Блок моркови",
+      "item.concoction.rock_salt": "Каменная соль",
       "block.concoction.cabbage_leaves_block": "Блок листьев капусты",
       "block.concoction.small_purple_pillow_block": "Маленькая фиолетовая подушка",
       "advancements.special_carpet.descr": "Получи особый ковёр странствующего торговца",
@@ -6978,12 +7032,12 @@
       "subtitles.soul_bucket_filled": "Bucket is filled with souls",
       "death.attack.spicy_damage.player": "%1$s thought they could handle the spice of %2$s",
       "subtitles.butter_churn_spin": "Butter Churn spins",
-      "block.concoction.sea_salt_sand": "Sea Salt Sand",
       "effect.concoction.sweetness": "Sweetness",
       "item.minecraft.lingering_potion.effect.blooming_buffed": "Lingering Potion of Blooming",
       "item.concoction.cherry_cookie": "Cherry Cookie",
       "advancements.spicy_remove_many_debuffs.title": "It\u0027s Got a Little Kick",
       "block.concoction.small_black_pillow_block": "Small Black Pillow",
+      "block.concoction.sea_salt_block": "Sea Salt Block",
       "advancements.fall_pillow.descr": "Fall over a hundred blocks on pillow",
       "death.attack.soul_damage": "%1$s was consumed by souls",
       "block.concoction.orange_woven_carpet": "Orange Woven Carpet",
@@ -7074,6 +7128,7 @@
       "block.concoction.black_pillow_block": "Black Pillow",
       "item.concoction.spicy_pepper": "Spicy Pepper",
       "advancements.nether_mutation.title": "Bloom to Doom",
+      "block.concoction.rock_salt_block": "Rock Salt Block",
       "gui.butter_churn.chance": "20%",
       "block.concoction.magenta_woven_carpet": "Magenta Woven Carpet",
       "item.concoction.bamboo_porkchop_soup": "Bamboo Porkchop Soup",
@@ -7155,6 +7210,7 @@
       "advancements.sapling_from_item.title": "Biodegradable",
       "item.minecraft.lingering_potion.effect.flame": "Lingering Potion of Flame",
       "block.concoction.carrot_block": "Carrot Block",
+      "item.concoction.rock_salt": "Rock Salt",
       "block.concoction.cabbage_leaves_block": "Cabbage Leaves Block",
       "block.concoction.small_purple_pillow_block": "Small Purple Pillow",
       "advancements.special_carpet.descr": "Get wandering woven carpet from wandering trader",

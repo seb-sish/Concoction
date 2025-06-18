@@ -152,6 +152,11 @@ public class VillagerTradesHandler {
             trades.get(2).add((entity, randomSource) -> new MerchantOffer(
                     new ItemCost(ConcoctionModItems.SEA_SALT.get(), 32),
                     new ItemStack(Items.EMERALD, 1), 16, 5, 0.05f));
+                    
+            trades.get(2).add((entity, randomSource) -> new MerchantOffer(
+                    new ItemCost(ConcoctionModItems.ROCK_SALT.get(), 32),
+                    new ItemStack(Items.EMERALD, 1), 16, 5, 0.05f));
+
 
             // Уровень 3
             trades.get(3).add((entity, randomSource) -> new MerchantOffer(

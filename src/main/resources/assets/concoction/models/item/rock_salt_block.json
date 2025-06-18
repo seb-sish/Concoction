@@ -1,5 +1,5 @@
 {
-  "parent": "concoction:block/sea_salt_sand",
+  "parent": "concoction:block/rock_salt_block",
   "display": {
     "thirdperson": {
       "rotation": [

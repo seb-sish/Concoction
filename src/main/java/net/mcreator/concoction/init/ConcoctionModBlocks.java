@@ -30,7 +30,8 @@ import net.mcreator.concoction.block.SoullandBlock;
 import net.mcreator.concoction.block.SoulIceBlock;
 import net.mcreator.concoction.block.SoakedRiceBlockBlock;
 import net.mcreator.concoction.block.SmallPillowBlock;
-import net.mcreator.concoction.block.SeaSaltSandBlock;
+import net.mcreator.concoction.block.SeaSaltBlockBlock;
+import net.mcreator.concoction.block.RockSaltBlockBlock;
 import net.mcreator.concoction.block.RiceBlockBlock;
 import net.mcreator.concoction.block.RedWovenCarpetBlock;
 import net.mcreator.concoction.block.ReapepperBlockBlock;
@@ -142,7 +143,6 @@ public class ConcoctionModBlocks {
 	public static final DeferredBlock<Block> PINECONE_BLOCK = REGISTRY.register("pinecone_block", PineconeBlockBlock::new);
 	public static final DeferredBlock<Block> REAPEPPER_BLOCK = REGISTRY.register("reapepper_block", ReapepperBlockBlock::new);
 	public static final DeferredBlock<Block> CHERRY_BLOCK = REGISTRY.register("cherry_block", CherryBlockBlock::new);
-	public static final DeferredBlock<Block> SEA_SALT_SAND = REGISTRY.register("sea_salt_sand", SeaSaltSandBlock::new);
 	public static final DeferredBlock<Block> SWEET_BERRIES_BLOCK = REGISTRY.register("sweet_berries_block", SweetBerriesBlockBlock::new);
 	public static final DeferredBlock<Block> BEETROOT_BLOCK = REGISTRY.register("beetroot_block", BeetrootBlockBlock::new);
 	public static final DeferredBlock<Block> CARROT_BLOCK = REGISTRY.register("carrot_block", CarrotBlockBlock::new);
@@ -150,6 +150,8 @@ public class ConcoctionModBlocks {
 	public static final DeferredBlock<Block> GLOW_BERRIES_BLOCK = REGISTRY.register("glow_berries_block", GlowBerriesBlockBlock::new);
 	public static final DeferredBlock<Block> CHORUS_BLOCK = REGISTRY.register("chorus_block", ChorusBlockBlock::new);
 	public static final DeferredBlock<Block> OVEN = REGISTRY.register("oven", OvenBlock::new);
+	public static final DeferredBlock<Block> SEA_SALT_BLOCK = REGISTRY.register("sea_salt_block", SeaSaltBlockBlock::new);
+	public static final DeferredBlock<Block> ROCK_SALT_BLOCK = REGISTRY.register("rock_salt_block", RockSaltBlockBlock::new);
 	// Start of user code block custom blocks
 	public static final DeferredBlock<Block> MINT_CHOCOLATE_CAKE = REGISTRY.register("mint_chocolate_cake", MintChocolateCakeBlock::new);
 	public static final DeferredBlock<Block> CARROT_CAKE = REGISTRY.register("carrot_cake", CarrotCakeBlock::new);
