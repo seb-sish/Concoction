@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:potion",
+    "minecraft:milk_bucket",
+    "minecraft:honey_bottle",
+    "concoction:mint_brew",
+    "concoction:hot_sauce_bottle",
+    "concoction:milk_bottle",
+    "concoction:cream_bottle",
+    "concoction:obsidian_tears_bottle",
+    "minecraft:ominous_bottle"
+  ]
+}

@@ -6543,6 +6543,17 @@
       "CUSTOM:CottonOil",
       "CUSTOM:CornOil"
     ],
+    "ITEMS:c:foods/drink": [
+      "Items.POTIONITEM",
+      "Items.MILK_BUCKET",
+      "Items.HONEY_BOTTLE",
+      "CUSTOM:MintBrew",
+      "CUSTOM:HotSauceBottle",
+      "CUSTOM:MilkBottle",
+      "CUSTOM:CreamBottle",
+      "CUSTOM:ObsidianTearsBottle",
+      "Items.OMINOUS_BOTTLE"
+    ],
     "ITEMS:minecraft:axes": [
       "~CUSTOM:OvergrownAxe"
     ],
