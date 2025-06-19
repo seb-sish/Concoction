@@ -4,13 +4,13 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "minecraft:wheat"
+      "item": "concoction:flour"
     },
     {
       "tag": "c:salts"
     },
     {
-      "item": "minecraft:wheat"
+      "item": "concoction:flour"
     },
     {
       "item": "minecraft:egg"

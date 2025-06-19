@@ -3,28 +3,28 @@
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
-    "recipeRetstackSize": 4,
-    "group": "dough",
+    "recipeRetstackSize": 6,
+    "group": "flour",
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
     "cookingTime": 200,
     "craftingBookCategory": "MISC",
-    "recipeShapeless": true,
+    "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "CUSTOM:Flour"
+        "value": "Blocks.WHEAT"
       },
       {
-        "value": "TAG:c:salts"
+        "value": "Blocks.WHEAT"
       },
       {
         "value": ""
       },
       {
-        "value": "CUSTOM:Flour"
+        "value": "Blocks.WHEAT"
       },
       {
-        "value": "TAG:mod:baking_oil"
+        "value": "Blocks.WHEAT"
       },
       {
         "value": ""
@@ -40,9 +40,9 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Dough"
+      "value": "CUSTOM:Flour"
     },
-    "name": "dough_craft_4",
+    "name": "flour_craft",
     "namespace": "mod"
   }
 }

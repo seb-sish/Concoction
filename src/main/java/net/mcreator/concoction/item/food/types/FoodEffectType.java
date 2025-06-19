@@ -14,7 +14,9 @@ public enum FoodEffectType implements StringRepresentable {
     SPICY("spicy"),
     MINTY("minty"),
     GLOW("glow"),
-    INSTABILITY("instability");
+    INSTABILITY("instability"),
+    SALTY("saltness");
+
 
     private final String name;
     private FoodEffectType(String name) {
@@ -33,6 +35,7 @@ public enum FoodEffectType implements StringRepresentable {
             case "minty" -> MINTY;
             case "glow" -> GLOW;
             case "instability" -> INSTABILITY;
+            case "saltness" -> SALTY;
             default -> throw new IllegalArgumentException("Invalid name: " + name);
         };
     }
@@ -44,6 +47,8 @@ public enum FoodEffectType implements StringRepresentable {
             case MINTY -> new MobEffectInstance(ConcoctionModMobEffects.MINTY_BREATH, duration*20, level-1, false, !isHidden, true, null);
             case GLOW ->  new MobEffectInstance(MobEffects.GLOWING, duration*20, level-1, false, !isHidden, true, null);
             case INSTABILITY -> new MobEffectInstance(ConcoctionModMobEffects.INSTABILITY, duration*20, level-1, false, !isHidden, true, null);
+            case SALTY -> new MobEffectInstance(ConcoctionModMobEffects.SALTNESS, duration*20, level-1, false, !isHidden, true, null);
+
         };
     }
 

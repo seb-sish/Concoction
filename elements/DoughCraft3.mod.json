@@ -12,7 +12,7 @@
     "recipeShapeless": true,
     "recipeSlots": [
       {
-        "value": "Blocks.WHEAT"
+        "value": "CUSTOM:Flour"
       },
       {
         "value": "TAG:c:salts"
@@ -21,7 +21,7 @@
         "value": ""
       },
       {
-        "value": "Blocks.WHEAT"
+        "value": "CUSTOM:Flour"
       },
       {
         "value": "CUSTOM:MilkBottle"

@@ -13,6 +13,7 @@ import net.minecraft.core.registries.Registries;
 import net.mcreator.concoction.potion.SweetnessMobEffect;
 import net.mcreator.concoction.potion.SunstruckEffectMobEffect;
 import net.mcreator.concoction.potion.SpicyMobEffect;
+import net.mcreator.concoction.potion.SaltnessMobEffect;
 import net.mcreator.concoction.potion.PhotosynthesisMobEffect;
 import net.mcreator.concoction.potion.MintyBreathMobEffect;
 import net.mcreator.concoction.potion.InstabilityMobEffect;
@@ -30,4 +31,5 @@ public class ConcoctionModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> SPICY = REGISTRY.register("spicy", () -> new SpicyMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> PHOTOSYNTHESIS = REGISTRY.register("photosynthesis", () -> new PhotosynthesisMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> SUNSTRUCK_EFFECT = REGISTRY.register("sunstruck_effect", () -> new SunstruckEffectMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> SALTNESS = REGISTRY.register("saltness", () -> new SaltnessMobEffect());
 }

@@ -2065,7 +2065,7 @@
       "name": "FishAndChips",
       "type": "item",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "fish_and_chips",
       "metadata": {
         "files": [
@@ -6342,6 +6342,46 @@
         ]
       },
       "path": "~/general"
+    },
+    {
+      "name": "Flour",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flour",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/concoction/item/FlourItem.java",
+          "src/main/resources/assets/concoction/models/item/flour.json"
+        ]
+      },
+      "path": "~/general"
+    },
+    {
+      "name": "FlourCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flour_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/concoction/recipe/flour_craft.json"
+        ]
+      },
+      "path": "~/general"
+    },
+    {
+      "name": "Saltness",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "saltness",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/concoction/potion/SaltnessMobEffect.java"
+        ]
+      },
+      "path": "~/general"
     }
   ],
   "variable_elements": [],
@@ -6430,10 +6470,6 @@
     "BLOCKS:minecraft:replaceable": [
       "~CUSTOM:WeightedSouls"
     ],
-    "BLOCKS:minecraft:tall_flowers": [
-      "CUSTOM:Mint",
-      "CUSTOM:Sunflower"
-    ],
     "BLOCKS:minecraft:mineable/hoe": [
       "~CUSTOM:ReapepperBlock",
       "~CUSTOM:SweetBerriesBlock",
@@ -6453,6 +6489,10 @@
       "~CUSTOM:CabbageBlock",
       "CUSTOM:SpicyPepperBlock",
       "CUSTOM:CornBlock"
+    ],
+    "BLOCKS:minecraft:tall_flowers": [
+      "CUSTOM:Mint",
+      "CUSTOM:Sunflower"
     ],
     "ITEMS:minecraft:flowers": [
       "CUSTOM:Mint",
@@ -6751,6 +6791,7 @@
       "item.concoction.spicy_pepper_seeds": "Семена жгучего перца",
       "block.concoction.soulland": "Пашня душ",
       "item.minecraft.tipped_arrow.effect.snowflake": "Стрела мороза",
+      "taste.concoction.saltness": "• Солёное",
       "block.concoction.pillow_block": "Белая подушка",
       "item.minecraft.splash_potion.effect.flame_extended": "Взрывное зелье жжения",
       "item.concoction.rice": "Рис",
@@ -6827,6 +6868,7 @@
       "gui.butter_churn.title": "Масловыбивание",
       "item_group.concoction.concoction": "Concoction",
       "block.concoction.soaked_rice_block": "Блок замоченного риса",
+      "effect.concoction.saltness": "Солёность",
       "block.concoction.purple_pillow_block": "Фиолетовая подушка",
       "death.attack.rift.player": "%1$s был нарезан на межпространственные кусочки пытаясь сбежать %2$s",
       "block.concoction.sunflower_seed_block": "Блок семечек подсолнуха",
@@ -6908,6 +6950,7 @@
       "block.concoction.small_white_pillow_block": "Маленькая белая подушка",
       "advancements.core.title": "Concoction",
       "item.concoction.cooked_rice": "Варёный рис",
+      "item.concoction.flour": "Мука",
       "item.concoction.overgrown_sword": "Цветущий меч",
       "block.concoction.small_pink_pillow_block": "Маленькая розовая подушка",
       "item.minecraft.splash_potion.effect.snowflake": "Взрывное зелье мороза",
@@ -7045,6 +7088,7 @@
       "item.concoction.spicy_pepper_seeds": "Spicy Pepper Seeds",
       "block.concoction.soulland": "Soulland",
       "item.minecraft.tipped_arrow.effect.snowflake": "Arrow of Snowflake",
+      "taste.concoction.saltness": "• Salty",
       "block.concoction.pillow_block": "White Pillow",
       "item.minecraft.splash_potion.effect.flame_extended": "Splash Potion of Flame",
       "item.concoction.rice": "Rice",
@@ -7121,6 +7165,7 @@
       "gui.butter_churn.title": "Spinning",
       "item_group.concoction.concoction": "Concoction",
       "block.concoction.soaked_rice_block": "Soaked Rice Block",
+      "effect.concoction.saltness": "Saltness",
       "block.concoction.purple_pillow_block": "Purple Pillow",
       "death.attack.rift.player": "%1$s was interdimensionally sliced whilst trying to escape %2$s",
       "block.concoction.sunflower_seed_block": "Sunflower Seed Block",
@@ -7202,6 +7247,7 @@
       "block.concoction.small_white_pillow_block": "Small White Pillow",
       "advancements.core.title": "Concoction",
       "item.concoction.cooked_rice": "Cooked Rice",
+      "item.concoction.flour": "Flour",
       "item.concoction.overgrown_sword": "Overgrown Sword",
       "block.concoction.small_pink_pillow_block": "Small Pink Pillow",
       "item.minecraft.splash_potion.effect.snowflake": "Splash Potion of Snowflake",
