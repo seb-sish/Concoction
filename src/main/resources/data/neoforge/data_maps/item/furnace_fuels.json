@@ -2,10 +2,10 @@
     "values":
     {
         "concoction:reapper": {
-            "burn_time": 100
+            "burn_time": 200
         },
         "concoction:reapepper_block": {
-            "burn_time": 900
+            "burn_time": 2000
         },
         "concoction:fabric": {
             "burn_time": 50
