@@ -236,6 +236,10 @@
     },
     "concoction:flour": {
       "chance": 0.35
+    },
+    "concoction:boiled_egg": {
+      "chance": 0.5
     }
+
   }
 }

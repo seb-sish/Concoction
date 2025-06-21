@@ -87,6 +87,7 @@ import net.mcreator.concoction.item.CakeSliceItem;
 import net.mcreator.concoction.item.CabbageLeafItem;
 import net.mcreator.concoction.item.ButterSandwichItem;
 import net.mcreator.concoction.item.ButterItem;
+import net.mcreator.concoction.item.BoiledEggItem;
 import net.mcreator.concoction.item.BambooPorkchopSoupItem;
 import net.mcreator.concoction.item.AnimalFatItem;
 import net.mcreator.concoction.ConcoctionMod;
@@ -231,6 +232,7 @@ public class ConcoctionModItems {
 	public static final DeferredItem<Item> MILK_BOTTLE = REGISTRY.register("milk_bottle", MilkBottleItem::new);
 	public static final DeferredItem<Item> CREAM_BOTTLE = REGISTRY.register("cream_bottle", CreamBottleItem::new);
 	public static final DeferredItem<Item> FLOUR = REGISTRY.register("flour", FlourItem::new);
+	public static final DeferredItem<Item> BOILED_EGG = REGISTRY.register("boiled_egg", BoiledEggItem::new);
 	// Start of user code block custom items
 	public static final DeferredItem<Item> CHERRY_CAKE = block(ConcoctionModBlocks.CHERRY_CAKE);
 	public static final DeferredItem<Item> GLOWBERRY_CAKE = block(ConcoctionModBlocks.GLOWBERRY_CAKE);
