@@ -36,7 +36,7 @@ public class CropPuffballBlock extends CropBlock {
 	public static final IntegerProperty AGE = IntegerProperty.create("age", 0, MAX_AGE);
 
 	public CropPuffballBlock() {
-		super(BlockBehaviour.Properties.of().mapColor(MapColor.CLAY).sound(SoundType.GRASS).instabreak().noCollission().noOcclusion().pushReaction(PushReaction.DESTROY).isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.CLAY).sound(SoundType.GRASS).instabreak().noCollission().noOcclusion().randomTicks().pushReaction(PushReaction.DESTROY).isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(AGE, 0));
 	}
 
@@ -60,7 +60,6 @@ public class CropPuffballBlock extends CropBlock {
 		// Форма блока в зависимости от возраста
 		return switch (state.getValue(AGE)) {
 			default -> Block.box(0, 0, 0, 16, 1, 16);
-
 			case 0 -> Block.box(0, 0, 0, 16, 1, 16);
 			case 1 -> Block.box(6, 1, 6, 10, 4, 10);
 			case 2 -> Block.box(4, 1, 4, 12, 7, 12);
@@ -82,9 +81,22 @@ public class CropPuffballBlock extends CropBlock {
 	}
 
 	@Override
-    public boolean mayPlaceOn(BlockState p_52302_, BlockGetter p_52303_, BlockPos p_52304_) {
-        return p_52302_.getBlock() instanceof FarmBlock || p_52302_.getBlock() instanceof SoullandBlock;
-    }
+	public boolean mayPlaceOn(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	    // Convert BlockGetter to LevelReader since canSurvive expects that
+	    if (!(worldIn instanceof LevelReader)) return false;
+	    return canSurvive(state, (LevelReader) worldIn, pos);
+	}
+
+
+	@Override
+protected boolean canSurvive(BlockState state, LevelReader worldIn, BlockPos pos) {
+    // Check if the block below can sustain this plant (usually farmland, dirt, etc)
+    BlockPos blockBelow = pos.below();
+    BlockState soil = worldIn.getBlockState(blockBelow);
+    return soil.isSolidRender(worldIn, blockBelow) || soil.getBlock() instanceof FarmBlock || soil.getBlock() instanceof SoullandBlock;
+}
+
+
 
 	@Override
 	public PathType getBlockPathType(BlockState state, BlockGetter world, BlockPos pos, Mob entity) {
