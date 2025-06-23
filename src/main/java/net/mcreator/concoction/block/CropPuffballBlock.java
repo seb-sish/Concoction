@@ -28,7 +28,18 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.neoforged.neoforge.common.SpecialPlantable;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FarmBlock;
-
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerLevel;
+import java.util.Random;
+import net.minecraft.world.level.Level;
+import net.minecraft.util.RandomSource;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
+import net.mcreator.concoction.init.ConcoctionModParticleTypes;
 
 
 public class CropPuffballBlock extends CropBlock {
@@ -121,4 +132,53 @@ protected boolean canSurvive(BlockState state, LevelReader worldIn, BlockPos pos
 		// Возвращает свойство возраста растения
 		return AGE; // не менять
 	}
+	
+	 @Override
+    public void entityInside(BlockState state, Level world, BlockPos pos, net.minecraft.world.entity.Entity entity) {
+        if (!world.isClientSide && entity instanceof LivingEntity) {
+            int age = state.getValue(AGE);
+            if (age == MAX_AGE) {
+    			if (entity instanceof LivingEntity livingEntity && !livingEntity.isCrouching()) {
+					livingEntity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 30, 0));
+					
+                world.setBlock(pos, state.setValue(AGE, age - 1), 3);
+				world.playSound(null, pos, SoundEvents.CROP_BREAK, SoundSource.BLOCKS, 1.0f, 1.0f);
+                // Emit particles above the block
+                if (world instanceof ServerLevel serverWorld) {
+                    serverWorld.sendParticles(ConcoctionModParticleTypes.SPORE_CLOUD.get(), pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5,
+                            10, 0.5, 0.5, 0.5, 0.01);
+                }
+
+                // Attempt to spawn copies around radius 4
+                RandomSource random = world.getRandom();
+
+                BlockPos.MutableBlockPos mutablePos = new BlockPos.MutableBlockPos();
+
+                for (int i = 0; i < 20; i++) { // try 20 times to spawn
+                    int dx = random.nextInt(9) - 4; // -4 to 4
+                    int dy = random.nextInt(3) - 1; // -1 to 1 (some vertical range)
+                    int dz = random.nextInt(9) - 4; // -4 to 4
+
+                    mutablePos.set(pos.getX() + dx, pos.getY() + dy, pos.getZ() + dz);
+
+                    BlockState targetState = world.getBlockState(mutablePos);
+                    BlockPos belowPos = mutablePos.below();
+                    BlockState soilState = world.getBlockState(belowPos);
+
+                    // Check if position is air and can survive here
+                    if (targetState.isAir() && this.canSurvive(this.defaultBlockState().setValue(AGE, 0), world, mutablePos)) {
+                        world.setBlock(mutablePos, this.defaultBlockState().setValue(AGE, 0), 3);
+
+                        // Spawn some particles at the spawn location too
+                        if (world instanceof ServerLevel serverWorld2) {
+                            serverWorld2.sendParticles(ConcoctionModParticleTypes.SPORE_CLOUD.get(), mutablePos.getX() + 0.5, mutablePos.getY() + 1.0, mutablePos.getZ() + 0.5,
+                                    5, 0.3, 0.3, 0.3, 0.01);
+                        }
+                    }
+                }
+            }
+            }
+        }
+        super.entityInside(state, world, pos, entity);
+    }
 }

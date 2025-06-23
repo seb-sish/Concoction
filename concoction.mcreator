@@ -6412,6 +6412,20 @@
         ]
       },
       "path": "~/puffball"
+    },
+    {
+      "name": "SporeCloud",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "spore_cloud",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/concoction/particles/spore_cloud.json",
+          "src/main/java/net/mcreator/concoction/client/particle/SporeCloudParticle.java"
+        ]
+      },
+      "path": "~/puffball"
     }
   ],
   "variable_elements": [],
