@@ -1,7 +1,14 @@
 {
   "variants": {
-    "": {
+    "age=0": {
       "model": "concoction:block/crop_puffball"
+    },
+    "age=1": {
+      "model": "concoction:block/crop_cabbage1"
+    },
+    "age=2": {
+      "model": "concoction:block/crop_cabbage2"
     }
+    } 
   }
 }

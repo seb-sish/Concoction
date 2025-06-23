@@ -34,7 +34,6 @@ import net.mcreator.concoction.item.RoastedPineconeItem;
 import net.mcreator.concoction.item.ReapperItem;
 import net.mcreator.concoction.item.RawNoodlesItem;
 import net.mcreator.concoction.item.PumpkinPieSliceItem;
-import net.mcreator.concoction.item.PuffballSporesItem;
 import net.mcreator.concoction.item.PopcornItem;
 import net.mcreator.concoction.item.PineconeItem;
 import net.mcreator.concoction.item.OvergrownSwordItem;
@@ -235,7 +234,6 @@ public class ConcoctionModItems {
 	public static final DeferredItem<Item> FLOUR = REGISTRY.register("flour", FlourItem::new);
 	public static final DeferredItem<Item> BOILED_EGG = REGISTRY.register("boiled_egg", BoiledEggItem::new);
 	public static final DeferredItem<Item> CROP_PUFFBALL = block(ConcoctionModBlocks.CROP_PUFFBALL);
-	public static final DeferredItem<Item> PUFFBALL_SPORES = REGISTRY.register("puffball_spores", PuffballSporesItem::new);
 	// Start of user code block custom items
 	public static final DeferredItem<Item> CHERRY_CAKE = block(ConcoctionModBlocks.CHERRY_CAKE);
 	public static final DeferredItem<Item> GLOWBERRY_CAKE = block(ConcoctionModBlocks.GLOWBERRY_CAKE);
@@ -254,6 +252,7 @@ public class ConcoctionModItems {
 	public static final DeferredItem<Item> COTTON = REGISTRY.register("cotton", () -> new ItemNameBlockItem(ConcoctionModBlocks.CROP_COTTON.get(), new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
 	public static final DeferredItem<Item> ONION = REGISTRY.register("onion",
 			() -> new ItemNameBlockItem(ConcoctionModBlocks.CROP_ONION.get(), new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(3).saturationModifier(0.3f).build())));
+	public static final DeferredItem<Item> PUFFBALL_SPORES = REGISTRY.register("puffball_spores", () -> new ItemNameBlockItem(ConcoctionModBlocks.CROP_PUFFBALL.get(), new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
 	public static final DeferredItem<Item> RED_PILLOW_BLOCK = block(ConcoctionModBlocks.RED_PILLOW_BLOCK);
 	public static final DeferredItem<Item> ORANGE_PILLOW_BLOCK = block(ConcoctionModBlocks.ORANGE_PILLOW_BLOCK);
 	public static final DeferredItem<Item> BROWN_PILLOW_BLOCK = block(ConcoctionModBlocks.BROWN_PILLOW_BLOCK);
