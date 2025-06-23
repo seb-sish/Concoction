@@ -4,10 +4,10 @@
       "model": "concoction:block/crop_puffball"
     },
     "age=1": {
-      "model": "concoction:block/crop_cabbage1"
+      "model": "concoction:block/puffball_small"
     },
     "age=2": {
-      "model": "concoction:block/crop_cabbage2"
+      "model": "concoction:block/puffball_big"
     }
     } 
   }

@@ -10,6 +10,7 @@
     "concoction:crop_cabbage",
     "concoction:crop_tomato",
     "concoction:nether_pepper_crop",
-    "concoction:crop_rice"
+    "concoction:crop_rice",
+    "concoction:crop_puffball"
   ]
 }

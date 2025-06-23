@@ -36,7 +36,7 @@ public class CropPuffballBlock extends CropBlock {
 	public static final IntegerProperty AGE = IntegerProperty.create("age", 0, MAX_AGE);
 
 	public CropPuffballBlock() {
-		super(BlockBehaviour.Properties.of().mapColor(MapColor.CLAY).sound(SoundType.GRASS).instabreak().noCollission().noOcclusion().randomTicks().pushReaction(PushReaction.DESTROY).isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.CLAY).sound(SoundType.GRASS).instabreak().noCollission().noOcclusion().pushReaction(PushReaction.DESTROY).isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(AGE, 0));
 	}
 
@@ -62,8 +62,8 @@ public class CropPuffballBlock extends CropBlock {
 			default -> Block.box(0, 0, 0, 16, 1, 16);
 
 			case 0 -> Block.box(0, 0, 0, 16, 1, 16);
-			case 1 -> Block.box(5, 0, 5, 11, 10, 11);
-			case 2 -> Block.box(3, 0, 3, 13, 12, 13);
+			case 1 -> Block.box(6, 1, 6, 10, 4, 10);
+			case 2 -> Block.box(4, 1, 4, 12, 7, 12);
 		};
 	}
 	
@@ -99,13 +99,14 @@ public class CropPuffballBlock extends CropBlock {
 	}
 
 	@Override
+    public int getMaxAge() {
+        // Возвращает максимальный возраст растения
+        return MAX_AGE; // не менять
+    }
+
+	@Override
 	public IntegerProperty getAgeProperty() {
 		// Возвращает свойство возраста растения
 		return AGE; // не менять
-	}
-
-	@Override
-	public boolean canBeReplaced(BlockState state, BlockPlaceContext context) {
-		return context.getItemInHand().getItem() != this.asItem();
 	}
 }

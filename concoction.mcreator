@@ -6501,10 +6501,6 @@
       "~CUSTOM:CropPuffball",
       "~CUSTOM:WeightedSouls"
     ],
-    "BLOCKS:minecraft:tall_flowers": [
-      "CUSTOM:Mint",
-      "CUSTOM:Sunflower"
-    ],
     "BLOCKS:minecraft:mineable/hoe": [
       "~CUSTOM:ReapepperBlock",
       "~CUSTOM:SweetBerriesBlock",
@@ -6525,6 +6521,10 @@
       "CUSTOM:SpicyPepperBlock",
       "CUSTOM:CornBlock"
     ],
+    "BLOCKS:minecraft:tall_flowers": [
+      "CUSTOM:Mint",
+      "CUSTOM:Sunflower"
+    ],
     "ITEMS:minecraft:flowers": [
       "CUSTOM:Mint",
       "CUSTOM:Sunflower",
@@ -6540,7 +6540,8 @@
       "CUSTOM:CropRice",
       "CUSTOM:CropCabbage",
       "CUSTOM:CropTomato",
-      "CUSTOM:NetherPepperCrop"
+      "CUSTOM:NetherPepperCrop",
+      "CUSTOM:CropPuffball"
     ],
     "ITEMS:minecraft:hoes": [
       "~CUSTOM:OvergrownHoe"
@@ -6647,7 +6648,8 @@
       "CUSTOM:CropRice",
       "CUSTOM:CropCabbage",
       "CUSTOM:CropTomato",
-      "CUSTOM:NetherPepperCrop"
+      "CUSTOM:NetherPepperCrop",
+      "CUSTOM:CropPuffball"
     ],
     "ITEMS:c:music_discs": [
       "CUSTOM:MusicDiscHotIce"
@@ -6698,7 +6700,8 @@
       "CUSTOM:CropRice",
       "CUSTOM:CropCabbage",
       "CUSTOM:CropTomato",
-      "CUSTOM:NetherPepperCrop"
+      "CUSTOM:NetherPepperCrop",
+      "CUSTOM:CropPuffball"
     ],
     "ENCHANTMENTS:minecraft:tradeable": [
       "~CUSTOM:Butchering"
@@ -6713,7 +6716,8 @@
       "CUSTOM:CropRice",
       "CUSTOM:CropCabbage",
       "CUSTOM:CropTomato",
-      "CUSTOM:NetherPepperCrop"
+      "CUSTOM:NetherPepperCrop",
+      "CUSTOM:CropPuffball"
     ],
     "ITEMS:mod:oils_and_butters": [
       "TAG:concoction:oils",
@@ -6730,7 +6734,8 @@
       "CUSTOM:CropSpicyPepper",
       "CUSTOM:CropRice",
       "CUSTOM:ButterChurn",
-      "CUSTOM:NetherPepperCrop"
+      "CUSTOM:NetherPepperCrop",
+      "CUSTOM:CropPuffball"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
       "~CUSTOM:RockSaltBlock",
@@ -6753,7 +6758,8 @@
       "CUSTOM:CropCabbage",
       "CUSTOM:CropTomato",
       "CUSTOM:NetherPepperCrop",
-      "CUSTOM:CropRice"
+      "CUSTOM:CropRice",
+      "CUSTOM:CropPuffball"
     ],
     "BLOCKS:mod:wildlife_plants": [
       "CUSTOM:Mint",
@@ -6766,7 +6772,8 @@
       "CUSTOM:WildBeetroot",
       "CUSTOM:WildPotato",
       "CUSTOM:WildCabbage",
-      "CUSTOM:WildTomato"
+      "CUSTOM:WildTomato",
+      "CUSTOM:CropPuffball"
     ],
     "ENTITIES:minecraft:no_anger_from_wind_charge": [
       "CUSTOM:Sunstruck"
@@ -6804,8 +6811,8 @@
       "item.concoction.tomato": "Томат",
       "advancements.new_crops.title": "Дикая находка",
       "item.minecraft.tipped_arrow.effect.snowflake_extended": "Стрела мороза",
-      "block.concoction.chorus_block": "Блок хоруса",
       "item.concoction.mint_cookie": "Мятное печенье",
+      "block.concoction.chorus_block": "Блок хоруса",
       "block.concoction.crop_onion": "Лук",
       "block.concoction.small_blue_pillow_block": "Маленькая синяя подушка",
       "effect.concoction.fiery_touch": "Испепеляющее касание",
@@ -7105,8 +7112,8 @@
       "item.concoction.tomato": "Tomato",
       "advancements.new_crops.title": "That\u0027s Wild",
       "item.minecraft.tipped_arrow.effect.snowflake_extended": "Arrow of Snowflake",
-      "block.concoction.chorus_block": "Chorus Block",
       "item.concoction.mint_cookie": "Mint Cookie",
+      "block.concoction.chorus_block": "Chorus Block",
       "block.concoction.crop_onion": "Crop Onion",
       "block.concoction.small_blue_pillow_block": "Small Blue Pillow",
       "effect.concoction.fiery_touch": "Fiery Touch",

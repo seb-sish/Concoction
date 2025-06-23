@@ -1,0 +1,9 @@
+{
+  "parent": "concoction:custom/puffball_big",
+  "textures": {
+    "all": "concoction:block/puffball_big",
+    "particle": "concoction:block/puffball_big",
+    "missing": "concoction:block/puffball_big"
+  },
+  "render_type": "cutout"
+}

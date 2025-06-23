@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "all": "puffball_big"
+      },
+      "name": "default"
+    }
+  }
+}
