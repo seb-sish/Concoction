@@ -74,7 +74,7 @@ public class CropPuffballBlock extends CropBlock {
 	public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state) {
 		// Предмет, получаемый при копировании блока на колёсико
 		return new ItemStack(
-            ConcoctionModItems.COTTON.get()
+            ConcoctionModItems.PUFFBALL_SPORES.get()
             );
 	}
 
@@ -87,7 +87,7 @@ public class CropPuffballBlock extends CropBlock {
 	@Override
 	protected ItemLike getBaseSeedId() {
 		// Возвращает семена для посадки растения
-		return ConcoctionModItems.COTTON.get();
+		return ConcoctionModItems.PUFFBALL_SPORES.get();
 	}
 
 	@Override
