@@ -6396,6 +6396,22 @@
         ]
       },
       "path": "~/general"
+    },
+    {
+      "name": "CropPuffball",
+      "type": "block",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "crop_puffball",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/concoction/blockstates/crop_puffball.json",
+          "src/main/resources/assets/concoction/models/item/crop_puffball.json",
+          "src/main/java/net/mcreator/concoction/block/CropPuffballBlock.java",
+          "src/main/resources/assets/concoction/models/block/crop_puffball.json"
+        ]
+      },
+      "path": "~/puffball"
     }
   ],
   "variable_elements": [],
@@ -6482,11 +6498,8 @@
   ],
   "tag_elements": {
     "BLOCKS:minecraft:replaceable": [
+      "~CUSTOM:CropPuffball",
       "~CUSTOM:WeightedSouls"
-    ],
-    "BLOCKS:minecraft:tall_flowers": [
-      "CUSTOM:Mint",
-      "CUSTOM:Sunflower"
     ],
     "BLOCKS:minecraft:mineable/hoe": [
       "~CUSTOM:ReapepperBlock",
@@ -6507,6 +6520,10 @@
       "~CUSTOM:CabbageBlock",
       "CUSTOM:SpicyPepperBlock",
       "CUSTOM:CornBlock"
+    ],
+    "BLOCKS:minecraft:tall_flowers": [
+      "CUSTOM:Mint",
+      "CUSTOM:Sunflower"
     ],
     "ITEMS:minecraft:flowers": [
       "CUSTOM:Mint",
@@ -6766,8 +6783,8 @@
     "ru_ru": {
       "taste.concoction.glow": "• Сияющее",
       "block.concoction.lime_pillow_block": "Лаймовая подушка",
-      "block.concoction.beetroot_block": "Блок свеклы",
       "block.concoction.light_gray_woven_carpet": "Светло-серый тканый ковёр",
+      "block.concoction.beetroot_block": "Блок свеклы",
       "subtitles.butter_thickens": "Масло загустело",
       "death.attack.spicy_damage": "%1$s больсе не смозет выговаливать букву \"Р\"",
       "block.concoction.mint": "Мята",
@@ -6806,8 +6823,8 @@
       "item.concoction.dough": "Тесто",
       "fluid.concoction.weighted_souls": "Призрачная жижа",
       "item.concoction.sea_salt": "Морская соль",
-      "block.concoction.orange_pillow_block": "Оранжевая подушка",
       "block.concoction.green_pillow_block": "Зелёная подушка",
+      "block.concoction.orange_pillow_block": "Оранжевая подушка",
       "block.concoction.onion_block": "Блок лука",
       "block.concoction.mint_bale": "Сноп мяты",
       "item.concoction.overgrown_shovel": "Цветущая лопата",
@@ -6817,6 +6834,7 @@
       "block.concoction.soulland": "Пашня душ",
       "item.minecraft.tipped_arrow.effect.snowflake": "Стрела мороза",
       "taste.concoction.saltness": "• Солёное",
+      "block.concoction.crop_puffball": "Crop Puffball",
       "block.concoction.pillow_block": "Белая подушка",
       "item.minecraft.splash_potion.effect.flame_extended": "Взрывное зелье жжения",
       "item.concoction.rice": "Рис",
@@ -7065,8 +7083,8 @@
     "en_us": {
       "taste.concoction.glow": "• Glimmering",
       "block.concoction.lime_pillow_block": "Lime Pillow",
-      "block.concoction.beetroot_block": "Beetroot Block",
       "block.concoction.light_gray_woven_carpet": "Light Gray Woven Carpet",
+      "block.concoction.beetroot_block": "Beetroot Block",
       "block.concoction.mint": "Mint",
       "death.attack.spicy_damage": "%1$s thought they could handle the spice",
       "subtitles.butter_thickens": "Butter thickens",
@@ -7105,8 +7123,8 @@
       "item.concoction.dough": "Dough",
       "fluid.concoction.weighted_souls": "Weighted Souls",
       "item.concoction.sea_salt": "Sea Salt",
-      "block.concoction.orange_pillow_block": "Orange Pillow",
       "block.concoction.green_pillow_block": "Green Pillow",
+      "block.concoction.orange_pillow_block": "Orange Pillow",
       "block.concoction.onion_block": "Onion Block",
       "block.concoction.mint_bale": "Mint Bale",
       "item.concoction.overgrown_shovel": "Overgrown Shovel",
@@ -7116,6 +7134,7 @@
       "block.concoction.soulland": "Soulland",
       "item.minecraft.tipped_arrow.effect.snowflake": "Arrow of Snowflake",
       "taste.concoction.saltness": "• Salty",
+      "block.concoction.crop_puffball": "Crop Puffball",
       "block.concoction.pillow_block": "White Pillow",
       "item.minecraft.splash_potion.effect.flame_extended": "Splash Potion of Flame",
       "item.concoction.rice": "Rice",

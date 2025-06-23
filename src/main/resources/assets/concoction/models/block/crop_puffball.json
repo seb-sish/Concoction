@@ -1,0 +1,9 @@
+{
+  "parent": "concoction:custom/flat_plane",
+  "textures": {
+    "all": "concoction:block/puffball_spores",
+    "particle": "concoction:block/puffball_spores",
+    "missing": "concoction:block/puffball_spores"
+  },
+  "render_type": "cutout"
+}

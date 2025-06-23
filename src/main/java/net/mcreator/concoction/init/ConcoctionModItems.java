@@ -233,6 +233,7 @@ public class ConcoctionModItems {
 	public static final DeferredItem<Item> CREAM_BOTTLE = REGISTRY.register("cream_bottle", CreamBottleItem::new);
 	public static final DeferredItem<Item> FLOUR = REGISTRY.register("flour", FlourItem::new);
 	public static final DeferredItem<Item> BOILED_EGG = REGISTRY.register("boiled_egg", BoiledEggItem::new);
+	public static final DeferredItem<Item> CROP_PUFFBALL = block(ConcoctionModBlocks.CROP_PUFFBALL);
 	// Start of user code block custom items
 	public static final DeferredItem<Item> CHERRY_CAKE = block(ConcoctionModBlocks.CHERRY_CAKE);
 	public static final DeferredItem<Item> GLOWBERRY_CAKE = block(ConcoctionModBlocks.GLOWBERRY_CAKE);

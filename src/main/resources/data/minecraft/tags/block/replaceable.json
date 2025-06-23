@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "concoction:crop_puffball",
     "concoction:weighted_souls"
   ]
 }
