@@ -6426,6 +6426,20 @@
         ]
       },
       "path": "~/puffball"
+    },
+    {
+      "name": "Puffball",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "puffball",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/concoction/models/item/puffball.json",
+          "src/main/java/net/mcreator/concoction/item/PuffballItem.java"
+        ]
+      },
+      "path": "~/puffball"
     }
   ],
   "variable_elements": [],
@@ -7087,6 +7101,7 @@
       "block.concoction.light_gray_pillow_block": "Светло-серая подушка",
       "item.concoction.raw_noodles": "Сырая лапша",
       "block.concoction.reapepper_block": "Блок перца-жнеца",
+      "item.concoction.puffball": "Puffball",
       "block.concoction.cherry_cake": "Вишнёвый пирог «Наслаждение»",
       "item.concoction.carrot_cake_slice": "Кусочек морковного торта",
       "block.concoction.wild_tomato": "Дикий томат",
@@ -7388,6 +7403,7 @@
       "block.concoction.light_gray_pillow_block": "Light Gray Pillow",
       "item.concoction.raw_noodles": "Raw Noodles",
       "block.concoction.reapepper_block": "Reapper Block",
+      "item.concoction.puffball": "Puffball",
       "block.concoction.cherry_cake": "Cherry Delight Cake",
       "item.concoction.carrot_cake_slice": "Carrot Cake Slice",
       "block.concoction.wild_tomato": "Wild Tomato",

@@ -242,6 +242,9 @@
     },
     "concoction:puffball_spores": {
       "chance": 0.35
+    },
+    "concoction:puffball": {
+      "chance": 0.5
     }
 
   }

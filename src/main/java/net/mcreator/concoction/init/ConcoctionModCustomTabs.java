@@ -51,6 +51,7 @@ public class ConcoctionModCustomTabs {
 				tabData.accept(ConcoctionModItems.TOMATO_SEEDS.get());
 				tabData.accept(ConcoctionModItems.REAPPER.get());
 				tabData.accept(ConcoctionModItems.REAPPER_SEEDS.get());
+				tabData.accept(ConcoctionModItems.PUFFBALL.get());
 				tabData.accept(ConcoctionModItems.PUFFBALL_SPORES.get());
 
 				
