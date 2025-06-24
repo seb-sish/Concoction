@@ -40,6 +40,11 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
 import net.mcreator.concoction.init.ConcoctionModParticleTypes;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.advancements.Advancement;
+import net.minecraft.advancements.AdvancementProgress;
+import net.mcreator.concoction.utils.Utils;
 
 
 public class CropPuffballBlock extends CropBlock {
@@ -140,7 +145,10 @@ protected boolean canSurvive(BlockState state, LevelReader worldIn, BlockPos pos
             if (age == MAX_AGE) {
     			if (entity instanceof LivingEntity livingEntity && !livingEntity.isCrouching()) {
 					livingEntity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 40, 0));
-					
+					if (livingEntity instanceof ServerPlayer serverPlayer) {
+    Utils.addAchievement(serverPlayer, "concoction:puffball_accident");
+}
+
                 world.setBlock(pos, state.setValue(AGE, age - 1), 3);
 				world.playSound(null, pos, SoundEvents.CROP_BREAK, SoundSource.BLOCKS, 1.0f, 1.0f);
                 // Emit particles above the block

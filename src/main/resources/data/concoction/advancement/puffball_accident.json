@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "concoction:puffball"
+    },
+    "title": {
+      "translate": "advancements.puffball_accident.title"
+    },
+    "description": {
+      "translate": "advancements.puffball_accident.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "puffball_accident_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "concoction:new_crops"
+}

@@ -18,7 +18,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class CreamBottleItem extends Item {
 	public CreamBottleItem() {
-		super(new Item.Properties().stacksTo(16).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(2).saturationModifier(0.3f).alwaysEdible().build()));
+		super(new Item.Properties().stacksTo(16).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(1).saturationModifier(0.3f).alwaysEdible().build()));
 	}
 
 	@Override
