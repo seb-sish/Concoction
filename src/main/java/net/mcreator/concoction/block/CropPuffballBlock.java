@@ -139,7 +139,7 @@ protected boolean canSurvive(BlockState state, LevelReader worldIn, BlockPos pos
             int age = state.getValue(AGE);
             if (age == MAX_AGE) {
     			if (entity instanceof LivingEntity livingEntity && !livingEntity.isCrouching()) {
-					livingEntity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 30, 0));
+					livingEntity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 40, 0));
 					
                 world.setBlock(pos, state.setValue(AGE, age - 1), 3);
 				world.playSound(null, pos, SoundEvents.CROP_BREAK, SoundSource.BLOCKS, 1.0f, 1.0f);

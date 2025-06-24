@@ -6431,7 +6431,7 @@
       "name": "Puffball",
       "type": "item",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "puffball",
       "metadata": {
         "files": [
@@ -6454,6 +6454,21 @@
           "src/main/resources/data/concoction/worldgen/placed_feature/puffball_mushrooms.json"
         ],
         "has_nbt_structure": true
+      },
+      "path": "~/puffball"
+    },
+    {
+      "name": "PuffballMushroomsFairyRing",
+      "type": "feature",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "puffball_mushrooms_fairy_ring",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/concoction/worldgen/configured_feature/puffball_mushrooms_fairy_ring.json",
+          "src/main/resources/data/concoction/neoforge/biome_modifier/puffball_mushrooms_fairy_ring_biome_modifier.json",
+          "src/main/resources/data/concoction/worldgen/placed_feature/puffball_mushrooms_fairy_ring.json"
+        ]
       },
       "path": "~/puffball"
     }
@@ -6545,6 +6560,10 @@
       "~CUSTOM:CropPuffball",
       "~CUSTOM:WeightedSouls"
     ],
+    "BLOCKS:minecraft:tall_flowers": [
+      "CUSTOM:Mint",
+      "CUSTOM:Sunflower"
+    ],
     "BLOCKS:minecraft:mineable/hoe": [
       "~CUSTOM:ReapepperBlock",
       "~CUSTOM:SweetBerriesBlock",
@@ -6564,10 +6583,6 @@
       "~CUSTOM:CabbageBlock",
       "CUSTOM:SpicyPepperBlock",
       "CUSTOM:CornBlock"
-    ],
-    "BLOCKS:minecraft:tall_flowers": [
-      "CUSTOM:Mint",
-      "CUSTOM:Sunflower"
     ],
     "ITEMS:minecraft:flowers": [
       "CUSTOM:Mint",
@@ -6596,6 +6611,9 @@
     "ITEMS:c:salts": [
       "CUSTOM:SeaSalt",
       "CUSTOM:RockSalt"
+    ],
+    "ITEMS:c:mushrooms": [
+      "CUSTOM:Puffball"
     ],
     "ITEMS:mod:woven_carpets": [
       "CUSTOM:WhiteWovenCarpet",
@@ -6855,8 +6873,8 @@
       "item.concoction.tomato": "Томат",
       "advancements.new_crops.title": "Дикая находка",
       "item.minecraft.tipped_arrow.effect.snowflake_extended": "Стрела мороза",
-      "block.concoction.chorus_block": "Блок хоруса",
       "item.concoction.mint_cookie": "Мятное печенье",
+      "block.concoction.chorus_block": "Блок хоруса",
       "block.concoction.crop_onion": "Лук",
       "block.concoction.small_blue_pillow_block": "Маленькая синяя подушка",
       "effect.concoction.fiery_touch": "Испепеляющее касание",
@@ -7157,8 +7175,8 @@
       "item.concoction.tomato": "Tomato",
       "advancements.new_crops.title": "That\u0027s Wild",
       "item.minecraft.tipped_arrow.effect.snowflake_extended": "Arrow of Snowflake",
-      "item.concoction.mint_cookie": "Mint Cookie",
       "block.concoction.chorus_block": "Chorus Block",
+      "item.concoction.mint_cookie": "Mint Cookie",
       "block.concoction.crop_onion": "Crop Onion",
       "block.concoction.small_blue_pillow_block": "Small Blue Pillow",
       "effect.concoction.fiery_touch": "Fiery Touch",

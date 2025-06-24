@@ -1,6 +1,9 @@
 {
   "type": "neoforge:add_features",
-  "biomes": "dark_forest",
+  "biomes": [
+    "dark_forest",
+    "mushroom_fields"
+  ],
   "features": "concoction:puffball_mushrooms",
   "step": "vegetal_decoration"
 }
