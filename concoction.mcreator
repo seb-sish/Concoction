@@ -6440,6 +6440,22 @@
         ]
       },
       "path": "~/puffball"
+    },
+    {
+      "name": "PuffballMushrooms",
+      "type": "feature",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "puffball_mushrooms",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/concoction/worldgen/configured_feature/puffball_mushrooms.json",
+          "src/main/resources/data/concoction/neoforge/biome_modifier/puffball_mushrooms_biome_modifier.json",
+          "src/main/resources/data/concoction/worldgen/placed_feature/puffball_mushrooms.json"
+        ],
+        "has_nbt_structure": true
+      },
+      "path": "~/puffball"
     }
   ],
   "variable_elements": [],
@@ -6839,8 +6855,8 @@
       "item.concoction.tomato": "Томат",
       "advancements.new_crops.title": "Дикая находка",
       "item.minecraft.tipped_arrow.effect.snowflake_extended": "Стрела мороза",
-      "item.concoction.mint_cookie": "Мятное печенье",
       "block.concoction.chorus_block": "Блок хоруса",
+      "item.concoction.mint_cookie": "Мятное печенье",
       "block.concoction.crop_onion": "Лук",
       "block.concoction.small_blue_pillow_block": "Маленькая синяя подушка",
       "effect.concoction.fiery_touch": "Испепеляющее касание",
@@ -6870,7 +6886,7 @@
       "block.concoction.soulland": "Пашня душ",
       "item.minecraft.tipped_arrow.effect.snowflake": "Стрела мороза",
       "taste.concoction.saltness": "• Солёное",
-      "block.concoction.crop_puffball": "Crop Puffball",
+      "block.concoction.crop_puffball": "Гриб дождевик",
       "block.concoction.pillow_block": "Белая подушка",
       "item.minecraft.splash_potion.effect.flame_extended": "Взрывное зелье жжения",
       "item.concoction.rice": "Рис",
@@ -7101,7 +7117,7 @@
       "block.concoction.light_gray_pillow_block": "Светло-серая подушка",
       "item.concoction.raw_noodles": "Сырая лапша",
       "block.concoction.reapepper_block": "Блок перца-жнеца",
-      "item.concoction.puffball": "Puffball",
+      "item.concoction.puffball": "Гриб дождевик",
       "block.concoction.cherry_cake": "Вишнёвый пирог «Наслаждение»",
       "item.concoction.carrot_cake_slice": "Кусочек морковного торта",
       "block.concoction.wild_tomato": "Дикий томат",
