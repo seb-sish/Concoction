@@ -45,6 +45,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.core.particles.ParticleTypes;
 
 
 
@@ -129,18 +130,28 @@ public class NetherPepperCropBlock extends CropBlock {
 		return true;
 	}
 	@Override
-	public void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
-	long time = world.getDayTime() % 24000; // Minecraft full day is 24000 ticks
-	if (time >= 17950 && time <= 18050) { // 2 seconds before and after midnight (18000 ticks is midnight)
-		for (Player player : world.getEntitiesOfClass(Player.class, new net.minecraft.world.phys.AABB(pos).inflate(8))) {
-			if (player.isAlive()) {
-				// 6.0F is the damage amount per tick
-				player.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("concoction:soul_damage")))), 4);
-			}
-		}
-	}
-	world.scheduleTick(pos, this, 20); // Schedule next tick in 1 second
-	}
+public void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
+    long time = world.getDayTime() % 24000;
+    if (time >= 17950 && time <= 18050) {
+        for (Player player : world.getEntitiesOfClass(Player.class, new net.minecraft.world.phys.AABB(pos).inflate(8))) {
+            if (player.isAlive()) {
+                // Damage player
+                player.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("concoction:soul_damage")))), 4);
+                    double px = player.getX() + world.random.nextDouble() * 0.6 - 0.3;
+					double py = player.getY() + player.getBbHeight() * 0.5 + world.random.nextDouble() * 0.6 - 0.3;
+					double pz = player.getZ() + world.random.nextDouble() * 0.6 - 0.3;
+					double vx = world.random.nextDouble() * 0.26 - 0.13;
+					double vy = world.random.nextDouble() * 0.07 + 0.13;
+					double vz = world.random.nextDouble() * 0.26 - 0.13;
+					world.sendParticles(ParticleTypes.SOUL, px, py, pz, 1, vx, vy, vz, 0.2);
+
+                
+            }
+        }
+    }
+    world.scheduleTick(pos, this, 20); // Schedule next tick in 1 second
+}
+
 
 
 	@Override
