@@ -40,6 +40,12 @@ import net.neoforged.neoforge.common.SpecialPlantable;
 import net.minecraft.util.RandomSource;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.damagesource.DamageType;
+import net.minecraft.world.damagesource.DamageSource;
+
 
 
 import net.mcreator.concoction.procedures.NetherPepperCropOnTickUpdateProcedure;
@@ -80,6 +86,14 @@ public class NetherPepperCropBlock extends CropBlock {
 	protected void randomTick(BlockState p_221050_, ServerLevel p_221051_, BlockPos p_221052_, RandomSource p_221053_) {
 		super.randomTick(p_221050_, p_221051_, p_221052_, p_221053_);
 	}
+	@Override
+	public void onPlace(BlockState state, Level world, BlockPos pos, BlockState oldState, boolean isMoving) {
+	    super.onPlace(state, world, pos, oldState, isMoving);
+	    if (!world.isClientSide()) {
+	        ((ServerLevel) world).scheduleTick(pos, this, 1);
+	    }
+	}
+
 
 	@Override
 	protected ItemInteractionResult useItemOn(ItemStack pItem, BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand p_316595_, BlockHitResult p_316140_) {
@@ -114,6 +128,20 @@ public class NetherPepperCropBlock extends CropBlock {
 		// Пропускает ли блок свет вниз
 		return true;
 	}
+	@Override
+	public void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
+	long time = world.getDayTime() % 24000; // Minecraft full day is 24000 ticks
+	if (time >= 17950 && time <= 18050) { // 2 seconds before and after midnight (18000 ticks is midnight)
+		for (Player player : world.getEntitiesOfClass(Player.class, new net.minecraft.world.phys.AABB(pos).inflate(8))) {
+			if (player.isAlive()) {
+				// 6.0F is the damage amount per tick
+				player.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("concoction:soul_damage")))), 4);
+			}
+		}
+	}
+	world.scheduleTick(pos, this, 20); // Schedule next tick in 1 second
+	}
+
 
 	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {

@@ -3867,7 +3867,7 @@
       "name": "NetherPepperCropOnTickUpdate",
       "type": "procedure",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "nether_pepper_crop_on_tick_update",
       "metadata": {
         "files": [
