@@ -1,6 +1,7 @@
 package net.mcreator.concoction.block.entity;
 
 import com.google.gson.Gson;
+import net.mcreator.concoction.ConcoctionMod;
 import net.mcreator.concoction.init.ConcoctionModBlockEntities;
 import net.mcreator.concoction.init.ConcoctionModRecipes;
 import net.mcreator.concoction.recipe.butterChurn.ButterChurnRecipe;
@@ -22,6 +23,7 @@ import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.RecipeHolder;
@@ -155,27 +157,38 @@ public class ButterChurnEntity extends RandomizableContainerBlockEntity {
     }
 
     public void craftItem() {
+        ConcoctionMod.LOGGER.info("Attempting to craft...");
         NonNullList<ItemStack> returned_items = checkReturnedItems();
         this.clearContent();
-        this.setItems(returned_items);
+        if (!returned_items.stream().allMatch(ItemStack::isEmpty)) {
+            this.setItems(returned_items);
+            ConcoctionMod.LOGGER.info("Returned items to churn: " + returned_items);
+        }
         this.craftResult = this.recipe.value().getOutput();
-
-//      this.setItem(0, this.output);
+        ConcoctionMod.LOGGER.info("Crafting result: " + this.craftResult);
     }
 
     private NonNullList<ItemStack> checkReturnedItems() {
+        //ConcoctionMod.LOGGER.info("Checking for items to return...");
         NonNullList<ItemStack> returned_items = NonNullList.withSize(this.ContainerSize, ItemStack.EMPTY);
-        for (int i=0; i < this.ContainerSize; i++) {
-            ItemStack itemstack = this.items.get(i);
-            if (itemstack.is(ItemTags.create(ResourceLocation.parse("c:buckets"))))
-                returned_items.set(i,  new ItemStack(Items.BUCKET));
-            else if (itemstack.is(ItemTags.create(ResourceLocation.parse("c:bottles"))))
-                returned_items.set(i,  new ItemStack(Items.GLASS_BOTTLE));
-//            else if (itemstack.getItem().equals(Items.IRON_AXE)) {
-//                ItemStack axe = new ItemStack(Items.IRON_AXE);
-//                axe.setDamageValue(( (int) (itemstack.getDamageValue()*0.8f)));
-//                returned_items.set(i, axe);
-//            }
+        ItemStack itemstack = this.items.getFirst();
+        //ConcoctionMod.LOGGER.info("Item in churn: " + itemstack);
+
+        if (itemstack.is(ItemTags.create(ResourceLocation.parse("c:buckets")))) {
+            returned_items.set(0, new ItemStack(Items.BUCKET, itemstack.getCount()));
+            //ConcoctionMod.LOGGER.info("Returning " + itemstack.getCount() + " buckets");
+        } else if (itemstack.is(ItemTags.create(ResourceLocation.parse("c:bottles")))) {
+            returned_items.set(0, new ItemStack(Items.GLASS_BOTTLE, itemstack.getCount()));
+            //ConcoctionMod.LOGGER.info("Returning " + itemstack.getCount() + " glass bottles");
+        } else if (itemstack.getItem().hasCraftingRemainingItem()) { // Fallback for other items
+            Item remainder = itemstack.getItem().getCraftingRemainingItem();
+            if (remainder != null) {
+                ItemStack returnedItem = new ItemStack(remainder, itemstack.getCount());
+                returned_items.set(0, returnedItem);
+                //ConcoctionMod.LOGGER.info("Crafting remainder from hasCraftingRemainingItem(): " + returnedItem);
+            } else {
+                //ConcoctionMod.LOGGER.warn("Item " + itemstack.getItem() + " has hasCraftingRemainingItem() but returns null. Not returning anything.");
+            }
         }
         return returned_items;
     }
@@ -196,10 +209,12 @@ public class ButterChurnEntity extends RandomizableContainerBlockEntity {
     public boolean hasRecipe() {
         Optional<RecipeHolder<ButterChurnRecipe>> recipe = getCurrentRecipe();
         if(recipe.isEmpty()) {
+            ConcoctionMod.LOGGER.info("No recipe found for: " + this.getItems());
             return false;
         }
 
         this.recipe = recipe.get();
+        ConcoctionMod.LOGGER.info("Recipe found: " + this.recipe.id());
         return true;
     }
 

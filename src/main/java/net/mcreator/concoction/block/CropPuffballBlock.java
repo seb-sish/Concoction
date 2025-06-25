@@ -146,8 +146,8 @@ protected boolean canSurvive(BlockState state, LevelReader worldIn, BlockPos pos
     			if (entity instanceof LivingEntity livingEntity && !livingEntity.isCrouching()) {
 					livingEntity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 40, 0));
 					if (livingEntity instanceof ServerPlayer serverPlayer) {
-    Utils.addAchievement(serverPlayer, "concoction:puffball_accident");
-}
+						Utils.addAchievement(serverPlayer, "concoction:puffball_accident");
+					}
 
                 world.setBlock(pos, state.setValue(AGE, age - 1), 3);
 				world.playSound(null, pos, SoundEvents.CROP_BREAK, SoundSource.BLOCKS, 1.0f, 1.0f);

@@ -1,4 +1,3 @@
-
 package net.mcreator.concoction.block;
 
 import net.mcreator.concoction.ConcoctionMod;
@@ -81,8 +80,6 @@ public class ButterChurnBlock extends Block implements EntityBlock {
 		} else {
 			BlockEntity blockentity = pLevel.getBlockEntity(pPos);
 
-
-
 			if (blockentity instanceof ButterChurnEntity butterChurn && pItem.getItem() instanceof ShovelItem &&
 					!butterChurn.hasCraftedResult() && butterChurn.hasRecipe()) {
 				if (pPlayer instanceof ServerPlayer _player) {
@@ -111,7 +108,6 @@ public class ButterChurnBlock extends Block implements EntityBlock {
 //                            LayeredCauldronBlock.lowerFillLevel(pState, pLevel, pPos);
 					pLevel.playSound(null, pPos, ConcoctionModSounds.BUTTER_THICKENS.get(),
 							SoundSource.BLOCKS, 1.0F, 1.0F);
-					butterChurn.craftItem();
 					pLevel.setBlockAndUpdate(pPos, pState.setValue(FULL, true));
 					butterChurn.setChanged();
 					return ItemInteractionResult.SUCCESS;

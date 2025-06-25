@@ -24,6 +24,7 @@ import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
+import net.mcreator.concoction.ConcoctionMod;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -65,9 +66,14 @@ public class ButterChurnRecipe implements Recipe<ButterChurnRecipeInput> {
         if(pLevel.isClientSide()) {
             return false;
         }
-        if (this.inputState.getValue(ButterChurnBlock.FULL).equals(pInput.state().getValue(ButterChurnBlock.FULL))) {
-            return this.inputItems.getFirst().getItems()[0].getItem().equals(pInput.getItem(0).getItem()) &&
-                    this.inputItems.size() == pInput.getItem(0).getCount();
+
+        boolean stateMatches = this.inputState.getValue(ButterChurnBlock.FULL).equals(pInput.state().getValue(ButterChurnBlock.FULL));
+        boolean itemMatches = this.inputItems.getFirst().getItems()[0].getItem().equals(pInput.getItem(0).getItem());
+        boolean countMatches = this.inputItems.size() == pInput.count();
+        ConcoctionMod.LOGGER.info(String.format("Matching recipe for %s with count %d. State: %b, Item: %b, Count: %b", pInput.getItem(0), pInput.count(), stateMatches, itemMatches, countMatches));
+
+        if (stateMatches) {
+            return itemMatches && countMatches;
         }
         return false;
     }
