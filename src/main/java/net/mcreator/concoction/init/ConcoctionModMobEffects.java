@@ -10,6 +10,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.core.registries.Registries;
 
+import net.mcreator.concoction.potion.WarmingMobEffect;
 import net.mcreator.concoction.potion.SweetnessMobEffect;
 import net.mcreator.concoction.potion.SunstruckEffectMobEffect;
 import net.mcreator.concoction.potion.SpicyMobEffect;
@@ -19,6 +20,7 @@ import net.mcreator.concoction.potion.MintyBreathMobEffect;
 import net.mcreator.concoction.potion.InstabilityMobEffect;
 import net.mcreator.concoction.potion.FrostTouchMobEffect;
 import net.mcreator.concoction.potion.FieryTouchMobEffect;
+import net.mcreator.concoction.potion.BitternessMobEffect;
 import net.mcreator.concoction.ConcoctionMod;
 
 public class ConcoctionModMobEffects {
@@ -32,4 +34,6 @@ public class ConcoctionModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> PHOTOSYNTHESIS = REGISTRY.register("photosynthesis", () -> new PhotosynthesisMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> SUNSTRUCK_EFFECT = REGISTRY.register("sunstruck_effect", () -> new SunstruckEffectMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> SALTNESS = REGISTRY.register("saltness", () -> new SaltnessMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> WARMING = REGISTRY.register("warming", () -> new WarmingMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> BITTERNESS = REGISTRY.register("bitterness", () -> new BitternessMobEffect());
 }

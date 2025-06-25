@@ -22,7 +22,8 @@ import static net.mcreator.concoction.init.ConcoctionModDataComponents.*;
 public class HotSauceBottleItem extends Item {
 	public HotSauceBottleItem() {
 		super(new Item.Properties().stacksTo(16).
-				component(FOOD_EFFECT.value(), new FoodEffectComponent(FoodEffectType.SPICY, 1, 30, true)).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(5).saturationModifier(0.6f).alwaysEdible().build()));
+				component(FOOD_EFFECT.value(), new FoodEffectComponent(FoodEffectType.SPICY, 1, 30, true)).
+				component(FOOD_EFFECT_2.value(), new FoodEffectComponent(FoodEffectType.SALTY, 1, 18, true)).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(5).saturationModifier(0.6f).alwaysEdible().build()));
 	}
 
 	@Override

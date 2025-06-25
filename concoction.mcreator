@@ -2331,7 +2331,7 @@
       "name": "CornSoup",
       "type": "item",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "corn_soup",
       "metadata": {
         "files": [
@@ -2641,7 +2641,7 @@
       "name": "OnionSoup",
       "type": "item",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "onion_soup",
       "metadata": {
         "files": [
@@ -3510,7 +3510,7 @@
       "name": "TomatoSoup",
       "type": "item",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "tomato_soup",
       "metadata": {
         "files": [
@@ -6484,6 +6484,32 @@
         ]
       },
       "path": "~/achivements"
+    },
+    {
+      "name": "Warming",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warming",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/concoction/potion/WarmingMobEffect.java"
+        ]
+      },
+      "path": "~/general"
+    },
+    {
+      "name": "Bitterness",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bitterness",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/concoction/potion/BitternessMobEffect.java"
+        ]
+      },
+      "path": "~/general"
     }
   ],
   "variable_elements": [],
@@ -6573,10 +6599,6 @@
       "~CUSTOM:CropPuffball",
       "~CUSTOM:WeightedSouls"
     ],
-    "BLOCKS:minecraft:tall_flowers": [
-      "CUSTOM:Mint",
-      "CUSTOM:Sunflower"
-    ],
     "BLOCKS:minecraft:mineable/hoe": [
       "~CUSTOM:ReapepperBlock",
       "~CUSTOM:SweetBerriesBlock",
@@ -6596,6 +6618,10 @@
       "~CUSTOM:CabbageBlock",
       "CUSTOM:SpicyPepperBlock",
       "CUSTOM:CornBlock"
+    ],
+    "BLOCKS:minecraft:tall_flowers": [
+      "CUSTOM:Mint",
+      "CUSTOM:Sunflower"
     ],
     "ITEMS:minecraft:flowers": [
       "CUSTOM:Mint",
@@ -6867,9 +6893,9 @@
       "block.concoction.lime_pillow_block": "Лаймовая подушка",
       "block.concoction.beetroot_block": "Блок свеклы",
       "block.concoction.light_gray_woven_carpet": "Светло-серый тканый ковёр",
-      "block.concoction.mint": "Мята",
-      "death.attack.spicy_damage": "%1$s больсе не смозет выговаливать букву \"Р\"",
       "subtitles.butter_thickens": "Масло загустело",
+      "death.attack.spicy_damage": "%1$s больсе не смозет выговаливать букву \"Р\"",
+      "block.concoction.mint": "Мята",
       "item.concoction.pinecone": "Шишка",
       "item.concoction.corn_oil": "Кукурузное масло",
       "advancements.special_carpet.title": "Красивая цена",
@@ -6879,15 +6905,15 @@
       "advancements.spicy_on_fire.title": "Ты просто огонь!",
       "advancements.make_soul_soul.title": "Адские сверхурочные",
       "block.concoction.wild_potato": "Дикий картофель",
-      "item.concoction.hashbrowns": "Хрустящие оладушки",
       "item.concoction.cooked_corn": "Жареная кукуруза",
+      "item.concoction.hashbrowns": "Хрустящие оладушки",
       "item.concoction.cream_bottle": "Бутылочка сливок",
       "item.concoction.cabbage_seeds": "Семена капусты",
       "item.concoction.tomato": "Томат",
       "advancements.new_crops.title": "Дикая находка",
       "item.minecraft.tipped_arrow.effect.snowflake_extended": "Стрела мороза",
-      "block.concoction.chorus_block": "Блок хоруса",
       "item.concoction.mint_cookie": "Мятное печенье",
+      "block.concoction.chorus_block": "Блок хоруса",
       "block.concoction.crop_onion": "Лук",
       "block.concoction.small_blue_pillow_block": "Маленькая синяя подушка",
       "effect.concoction.fiery_touch": "Испепеляющее касание",
@@ -7002,6 +7028,7 @@
       "advancements.new_crops.descr": "Найди новые дикорастущие культуры",
       "item.concoction.hanami_dango": "Ханами данго",
       "effect.concoction.spicy": "Жгучесть",
+      "effect.concoction.bitterness": "Горькость",
       "taste.concoction.minty": "• Мятное",
       "advancements.giant_corn_witness.descr": "Узнай как электричество влияет на рост кукурузы",
       "block.concoction.blue_pillow_block": "Синяя подушка",
@@ -7081,6 +7108,7 @@
       "item.concoction.cooked_rice": "Варёный рис",
       "item.concoction.flour": "Мука",
       "item.concoction.overgrown_sword": "Цветущий меч",
+      "taste.concoction.warming": "• Согревающее",
       "block.concoction.small_pink_pillow_block": "Маленькая розовая подушка",
       "item.minecraft.splash_potion.effect.snowflake": "Взрывное зелье мороза",
       "item.minecraft.splash_potion.effect.blooming_buffed": "Взрывное зелье цветения",
@@ -7131,6 +7159,7 @@
       "item.concoction.onion_soup": "Луковый суп",
       "item.concoction.chicken_confit": "Куриное конфи",
       "block.concoction.lingonberry_cake": "Брусничный сливочный торт",
+      "effect.concoction.warming": "Теплота",
       "container.cooking_cauldron": "Варение",
       "advancements.sapling_from_item.title": "Биоразлагаемость",
       "item.minecraft.lingering_potion.effect.flame": "Оседающее зелье жжения",
@@ -7150,6 +7179,7 @@
       "block.concoction.light_gray_pillow_block": "Светло-серая подушка",
       "item.concoction.raw_noodles": "Сырая лапша",
       "block.concoction.reapepper_block": "Блок перца-жнеца",
+      "taste.concoction.bitterness": "• Горькое",
       "item.concoction.puffball": "Гриб дождевик",
       "block.concoction.cherry_cake": "Вишнёвый пирог «Наслаждение»",
       "item.concoction.carrot_cake_slice": "Кусочек морковного торта",
@@ -7306,6 +7336,7 @@
       "advancements.new_crops.descr": "Find any new wild plants that can be planted and harvested",
       "item.concoction.hanami_dango": "Hanami Dango",
       "effect.concoction.spicy": "Spiciness",
+      "effect.concoction.bitterness": "Bitterness",
       "taste.concoction.minty": "• Minty",
       "advancements.giant_corn_witness.descr": "Witness how lightning affects corn growth",
       "block.concoction.blue_pillow_block": "Blue Pillow",
@@ -7385,6 +7416,7 @@
       "item.concoction.cooked_rice": "Cooked Rice",
       "item.concoction.flour": "Flour",
       "item.concoction.overgrown_sword": "Overgrown Sword",
+      "taste.concoction.warming": "• Warming",
       "block.concoction.small_pink_pillow_block": "Small Pink Pillow",
       "item.minecraft.splash_potion.effect.snowflake": "Splash Potion of Snowflake",
       "item.minecraft.splash_potion.effect.blooming_buffed": "Splash Potion of Blooming",
@@ -7435,6 +7467,7 @@
       "item.concoction.onion_soup": "Onion Soup",
       "item.concoction.chicken_confit": "Chicken Confit",
       "block.concoction.lingonberry_cake": "Lingonberry Cream Cake",
+      "effect.concoction.warming": "Warming",
       "container.cooking_cauldron": "Boiling",
       "advancements.sapling_from_item.title": "Biodegradable",
       "item.minecraft.lingering_potion.effect.flame": "Lingering Potion of Flame",
@@ -7454,6 +7487,7 @@
       "block.concoction.light_gray_pillow_block": "Light Gray Pillow",
       "item.concoction.raw_noodles": "Raw Noodles",
       "block.concoction.reapepper_block": "Reapper Block",
+      "taste.concoction.bitterness": "• Bitter",
       "item.concoction.puffball": "Puffball",
       "block.concoction.cherry_cake": "Cherry Delight Cake",
       "item.concoction.carrot_cake_slice": "Carrot Cake Slice",

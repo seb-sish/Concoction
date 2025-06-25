@@ -100,5 +100,20 @@ public class ConcoctionModDataComponents {
         event.modify(Items.ENCHANTED_GOLDEN_APPLE, builder ->
                 builder.set(FOOD_EFFECT.value(), new FoodEffectComponent(SWEET, 5, 30, true))
         );
+        event.modify(Items.PUFFERFISH, builder ->
+                builder.set(FOOD_EFFECT.value(), new FoodEffectComponent(BITTER, 2, 18, true))
+        );
+        event.modify(Items.DRIED_KELP, builder ->
+                builder.set(FOOD_EFFECT.value(), new FoodEffectComponent(SALTY, 1, 30, true))
+        );
+        event.modify(Items.POTATO, builder ->
+                builder.set(FOOD_EFFECT.value(), new FoodEffectComponent(BITTER, 1, 30, true))
+        );
+        event.modify(Items.POISONOUS_POTATO, builder ->
+                builder.set(FOOD_EFFECT.value(), new FoodEffectComponent(BITTER, 2, 30, true))
+        );
+        event.modify(Items.SUSPICIOUS_STEW, builder ->
+                builder.set(FOOD_EFFECT.value(), new FoodEffectComponent(BITTER, 1, 45, true))
+        );
     }
 }

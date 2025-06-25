@@ -149,7 +149,7 @@ protected boolean canSurvive(BlockState state, LevelReader worldIn, BlockPos pos
 						Utils.addAchievement(serverPlayer, "concoction:puffball_accident");
 					}
 
-                world.setBlock(pos, state.setValue(AGE, age - 1), 3);
+                world.setBlock(pos, state.setValue(AGE, age - 2), 3);
 				world.playSound(null, pos, SoundEvents.CROP_BREAK, SoundSource.BLOCKS, 1.0f, 1.0f);
                 // Emit particles above the block
                 if (world instanceof ServerLevel serverWorld) {

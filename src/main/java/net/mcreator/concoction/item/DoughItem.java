@@ -10,9 +10,14 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 
+import static net.mcreator.concoction.init.ConcoctionModDataComponents.*;
+import net.mcreator.concoction.item.food.types.FoodEffectComponent;
+import net.mcreator.concoction.item.food.types.FoodEffectType;
+
+
 public class DoughItem extends Item {
 	public DoughItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(3).saturationModifier(0.3f).effect(() -> new MobEffectInstance(MobEffects.HUNGER, 230, 0), 0.3F).build()));
+		super(new Item.Properties().stacksTo(64).component(FOOD_EFFECT.value(), new FoodEffectComponent(FoodEffectType.SALTY, 1, 8, true)).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(3).saturationModifier(0.3f).effect(() -> new MobEffectInstance(MobEffects.HUNGER, 230, 0), 0.3F).build()));
 	}
 
 	@Override

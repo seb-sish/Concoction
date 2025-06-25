@@ -17,6 +17,7 @@ public class VegetableSoupItem extends Item {
 	public VegetableSoupItem() {
 		super(new Item.Properties().stacksTo(16)
 				.rarity(Rarity.COMMON)
+				.component(FOOD_EFFECT.value(), new FoodEffectComponent(FoodEffectType.WARM, 1, 300, true))
 				.food((new FoodProperties.Builder()).nutrition(6).saturationModifier(1.0f).build()));
 	}
 
