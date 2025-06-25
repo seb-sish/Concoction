@@ -78,12 +78,24 @@ public class NetherPepperCropBlock extends CropBlock {
 				.isRedstoneConductor((bs, br, bp) -> false));
 		// Регистрация состояния по умолчанию
 		this.registerDefaultState(this.stateDefinition.any().setValue(AGE, 0));
-	}
+		}
+
+		@Override
+		public boolean mayPlaceOn(BlockState state, BlockGetter worldIn, BlockPos pos) {
+		    // Convert BlockGetter to LevelReader since canSurvive expects that
+		    if (!(worldIn instanceof LevelReader)) return false;
+		    return canSurvive(state, (LevelReader) worldIn, pos);
+		}
+
 
 	@Override
-	public boolean mayPlaceOn(BlockState p_52302_, BlockGetter p_52303_, BlockPos p_52304_) {
-		return p_52302_.getBlock() instanceof SoullandBlock;
+	protected boolean canSurvive(BlockState state, LevelReader worldIn, BlockPos pos) {
+	    // Check if the block below can sustain this plant (usually farmland, dirt, etc)
+	    BlockPos blockBelow = pos.below();
+	    BlockState soil = worldIn.getBlockState(blockBelow);
+	    return soil.getBlock() instanceof SoullandBlock;
 	}
+
 	protected void randomTick(BlockState p_221050_, ServerLevel p_221051_, BlockPos p_221052_, RandomSource p_221053_) {
 		super.randomTick(p_221050_, p_221051_, p_221052_, p_221053_);
 	}
