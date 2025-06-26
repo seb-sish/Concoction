@@ -237,11 +237,11 @@ public class ConcoctionModItems {
 	public static final DeferredItem<Item> CROP_PUFFBALL = block(ConcoctionModBlocks.CROP_PUFFBALL);
 	public static final DeferredItem<Item> PUFFBALL = REGISTRY.register("puffball", PuffballItem::new);
 	// Start of user code block custom items
-	public static final DeferredItem<Item> CHERRY_CAKE = block(ConcoctionModBlocks.CHERRY_CAKE);
-	public static final DeferredItem<Item> GLOWBERRY_CAKE = block(ConcoctionModBlocks.GLOWBERRY_CAKE);
-	public static final DeferredItem<Item> CHOCOLATE_CAKE = block(ConcoctionModBlocks.CHOCOLATE_CAKE);
-	public static final DeferredItem<Item> CARROT_CAKE = block(ConcoctionModBlocks.CARROT_CAKE);
-	public static final DeferredItem<Item> LINGONBERRY_CAKE = block(ConcoctionModBlocks.LINGONBERRY_CAKE);
+	public static final DeferredItem<Item> CHERRY_CAKE = block(ConcoctionModBlocks.CHERRY_CAKE, 1);
+	public static final DeferredItem<Item> GLOWBERRY_CAKE = block(ConcoctionModBlocks.GLOWBERRY_CAKE, 1);
+	public static final DeferredItem<Item> CHOCOLATE_CAKE = block(ConcoctionModBlocks.CHOCOLATE_CAKE, 1);
+	public static final DeferredItem<Item> CARROT_CAKE = block(ConcoctionModBlocks.CARROT_CAKE, 1);
+	public static final DeferredItem<Item> LINGONBERRY_CAKE = block(ConcoctionModBlocks.LINGONBERRY_CAKE, 1);
 	public static final DeferredItem<Item> REAPPER_SEEDS = REGISTRY.register("reapper_seeds", () -> new ItemNameBlockItem(ConcoctionModBlocks.NETHER_PEPPER_CROP.get(), new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
 	public static final DeferredItem<Item> RICE = REGISTRY.register("rice", () -> new ItemNameBlockItem(ConcoctionModBlocks.CROP_RICE.get(), new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)));
 	public static final DeferredItem<Item> MINT_CHOCOLATE_CAKE = block(ConcoctionModBlocks.MINT_CHOCOLATE_CAKE, 1);
