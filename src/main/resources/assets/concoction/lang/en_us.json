@@ -304,5 +304,7 @@
   "taste.concoction.sweet": "• Sweet",
   "effect.concoction.minty_breath": "Mintiness",
   "block.concoction.small_brown_pillow_block": "Small Brown Pillow",
-  "item.concoction.cod_sushi": "Cod Sushi"
+  "item.concoction.cod_sushi": "Cod Sushi",
+  "message.concoction.cow_not_ready_bucket": "Cow is not ready to be milked with a bucket!",
+  "message.concoction.cow_not_ready_bottle": "Cow is not ready to be milked"
 }

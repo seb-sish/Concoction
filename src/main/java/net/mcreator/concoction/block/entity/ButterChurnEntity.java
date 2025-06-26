@@ -120,17 +120,11 @@ public class ButterChurnEntity extends RandomizableContainerBlockEntity {
             flag = true;
         }
 
-        else if (!itemstack.getItem().equals(addedItem.getItem()))
-            flag = false;
-
-        else if (itemstack.getItem().equals(addedItem.getItem()) && itemstack.getMaxStackSize() > itemstack.getCount()+count) {
+        else if (ItemStack.isSameItemSameComponents(itemstack, addedItem) && itemstack.getCount() < 8) {
             int to_add = min(count, 8-itemstack.getCount());
-            if (to_add == 0) return false;
-            if (isCreative || addedItem.getCount() - addedItem.split(to_add).getCount() != 0) {
-                this.items.getFirst().grow(to_add);
-                this.setChanged();
-                flag = true;
-            }
+            itemstack.grow(to_add);
+            if (!isCreative) addedItem.shrink(to_add);
+            flag = true;
         }
 //        if (flag) this.resetProgress();
         return flag;
@@ -157,15 +151,15 @@ public class ButterChurnEntity extends RandomizableContainerBlockEntity {
     }
 
     public void craftItem() {
-        ConcoctionMod.LOGGER.info("Attempting to craft...");
+        //ConcoctionMod.LOGGER.info("Attempting to craft...");
         NonNullList<ItemStack> returned_items = checkReturnedItems();
         this.clearContent();
         if (!returned_items.stream().allMatch(ItemStack::isEmpty)) {
             this.setItems(returned_items);
-            ConcoctionMod.LOGGER.info("Returned items to churn: " + returned_items);
+            //ConcoctionMod.LOGGER.info("Returned items to churn: " + returned_items);
         }
         this.craftResult = this.recipe.value().getOutput();
-        ConcoctionMod.LOGGER.info("Crafting result: " + this.craftResult);
+        //ConcoctionMod.LOGGER.info("Crafting result: " + this.craftResult);
     }
 
     private NonNullList<ItemStack> checkReturnedItems() {
@@ -209,12 +203,12 @@ public class ButterChurnEntity extends RandomizableContainerBlockEntity {
     public boolean hasRecipe() {
         Optional<RecipeHolder<ButterChurnRecipe>> recipe = getCurrentRecipe();
         if(recipe.isEmpty()) {
-            ConcoctionMod.LOGGER.info("No recipe found for: " + this.getItems());
+            //ConcoctionMod.LOGGER.info("No recipe found for: " + this.getItems());
             return false;
         }
 
         this.recipe = recipe.get();
-        ConcoctionMod.LOGGER.info("Recipe found: " + this.recipe.id());
+        //ConcoctionMod.LOGGER.info("Recipe found: " + this.recipe.id());
         return true;
     }
 

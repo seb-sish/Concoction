@@ -12,7 +12,8 @@
     "LightningBoltMixin",
     "PlayerMixin",
     "ZombieMixin",
-    "BeeMixin"
+    "BeeMixin",
+    "CowMixin"
   ],
   "client": [
     "GuiMixin"
