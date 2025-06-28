@@ -152,6 +152,7 @@ public class ConcoctionModCustomTabs {
 				tabData.accept(ConcoctionModItems.CHORUS_BLOCK.get());
 
 //Функциональные блоки
+				tabData.accept(ConcoctionModItems.OAK_KITCHEN_CABINET.get());
 				tabData.accept(ConcoctionModItems.OVEN.get());
 				tabData.accept(ConcoctionModItems.BUTTER_CHURN.get());
 				tabData.accept(ConcoctionModItems.SOULLAND.get());

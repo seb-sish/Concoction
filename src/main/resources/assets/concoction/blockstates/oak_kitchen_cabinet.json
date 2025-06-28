@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "concoction:block/oak_kitchen_cabinet"
+    },
+    "facing=east": {
+      "model": "concoction:block/oak_kitchen_cabinet",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "concoction:block/oak_kitchen_cabinet",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "concoction:block/oak_kitchen_cabinet",
+      "y": 270
+    }
+  }
+}

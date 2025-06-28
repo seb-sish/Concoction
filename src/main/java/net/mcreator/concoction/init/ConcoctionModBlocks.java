@@ -43,6 +43,7 @@ import net.mcreator.concoction.block.PillowBlockBlock;
 import net.mcreator.concoction.block.OvenBlock;
 import net.mcreator.concoction.block.OrangeWovenCarpetBlock;
 import net.mcreator.concoction.block.OnionBlockBlock;
+import net.mcreator.concoction.block.OakKitchenCabinetBlock;
 import net.mcreator.concoction.block.NetherPepperCropBlock;
 import net.mcreator.concoction.block.MintChocolateCakeBlock;
 import net.mcreator.concoction.block.MintBlock;
@@ -154,6 +155,7 @@ public class ConcoctionModBlocks {
 	public static final DeferredBlock<Block> SEA_SALT_BLOCK = REGISTRY.register("sea_salt_block", SeaSaltBlockBlock::new);
 	public static final DeferredBlock<Block> ROCK_SALT_BLOCK = REGISTRY.register("rock_salt_block", RockSaltBlockBlock::new);
 	public static final DeferredBlock<Block> CROP_PUFFBALL = REGISTRY.register("crop_puffball", CropPuffballBlock::new);
+	public static final DeferredBlock<Block> OAK_KITCHEN_CABINET = REGISTRY.register("oak_kitchen_cabinet", OakKitchenCabinetBlock::new);
 	// Start of user code block custom blocks
 	public static final DeferredBlock<Block> MINT_CHOCOLATE_CAKE = REGISTRY.register("mint_chocolate_cake", MintChocolateCakeBlock::new);
 	public static final DeferredBlock<Block> CARROT_CAKE = REGISTRY.register("carrot_cake", CarrotCakeBlock::new);

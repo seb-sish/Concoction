@@ -6510,6 +6510,51 @@
         ]
       },
       "path": "~/general"
+    },
+    {
+      "name": "OakKitchenCabinet",
+      "type": "block",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "oak_kitchen_cabinet",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/concoction/models/block/oak_kitchen_cabinet.json",
+          "src/main/resources/assets/concoction/blockstates/oak_kitchen_cabinet.json",
+          "src/main/java/net/mcreator/concoction/block/entity/OakKitchenCabinetBlockEntity.java",
+          "src/main/resources/data/concoction/loot_table/blocks/oak_kitchen_cabinet.json",
+          "src/main/java/net/mcreator/concoction/block/OakKitchenCabinetBlock.java",
+          "src/main/resources/assets/concoction/models/item/oak_kitchen_cabinet.json"
+        ]
+      },
+      "path": "~/kitchen_cabinets"
+    },
+    {
+      "name": "OakKitchenCabinetCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "oak_kitchen_cabinet_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/concoction/recipe/oak_kitchen_cabinet_craft.json"
+        ]
+      },
+      "path": "~/kitchen_cabinets"
+    },
+    {
+      "name": "KitchenCabinetInterface",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "kitchen_cabinet_interface",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/concoction/world/inventory/KitchenCabinetInterfaceMenu.java",
+          "src/main/java/net/mcreator/concoction/client/gui/KitchenCabinetInterfaceScreen.java"
+        ]
+      },
+      "path": "~/kitchen_cabinets"
     }
   ],
   "variable_elements": [],
@@ -6825,6 +6870,7 @@
       "TAG:concoction:butters"
     ],
     "BLOCKS:minecraft:mineable/axe": [
+      "~CUSTOM:OakKitchenCabinet",
       "~CUSTOM:PineconeBlock",
       "CUSTOM:CropMint",
       "CUSTOM:CropCotton",
@@ -6893,9 +6939,9 @@
       "block.concoction.lime_pillow_block": "Лаймовая подушка",
       "block.concoction.beetroot_block": "Блок свеклы",
       "block.concoction.light_gray_woven_carpet": "Светло-серый тканый ковёр",
-      "subtitles.butter_thickens": "Масло загустело",
-      "death.attack.spicy_damage": "%1$s больсе не смозет выговаливать букву \"Р\"",
       "block.concoction.mint": "Мята",
+      "death.attack.spicy_damage": "%1$s больсе не смозет выговаливать букву \"Р\"",
+      "subtitles.butter_thickens": "Масло загустело",
       "item.concoction.pinecone": "Шишка",
       "item.concoction.corn_oil": "Кукурузное масло",
       "advancements.special_carpet.title": "Красивая цена",
@@ -6905,15 +6951,15 @@
       "advancements.spicy_on_fire.title": "Ты просто огонь!",
       "advancements.make_soul_soul.title": "Адские сверхурочные",
       "block.concoction.wild_potato": "Дикий картофель",
-      "item.concoction.cooked_corn": "Жареная кукуруза",
       "item.concoction.hashbrowns": "Хрустящие оладушки",
+      "item.concoction.cooked_corn": "Жареная кукуруза",
       "item.concoction.cream_bottle": "Бутылочка сливок",
       "item.concoction.cabbage_seeds": "Семена капусты",
       "item.concoction.tomato": "Томат",
       "advancements.new_crops.title": "Дикая находка",
       "item.minecraft.tipped_arrow.effect.snowflake_extended": "Стрела мороза",
-      "item.concoction.mint_cookie": "Мятное печенье",
       "block.concoction.chorus_block": "Блок хоруса",
+      "item.concoction.mint_cookie": "Мятное печенье",
       "block.concoction.crop_onion": "Лук",
       "block.concoction.small_blue_pillow_block": "Маленькая синяя подушка",
       "effect.concoction.fiery_touch": "Испепеляющее касание",
@@ -7112,6 +7158,7 @@
       "item.concoction.overgrown_sword": "Цветущий меч",
       "taste.concoction.warming": "• Согревающее",
       "block.concoction.small_pink_pillow_block": "Маленькая розовая подушка",
+      "block.concoction.oak_kitchen_cabinet": "Дубовый кухонный шкаф",
       "item.minecraft.splash_potion.effect.snowflake": "Взрывное зелье мороза",
       "item.minecraft.splash_potion.effect.blooming_buffed": "Взрывное зелье цветения",
       "advancements.cry_about_it.descr": "Выпей обсидиановы слёзы и испытай последствия своих действий.",
@@ -7423,6 +7470,7 @@
       "item.concoction.overgrown_sword": "Overgrown Sword",
       "taste.concoction.warming": "• Warming",
       "block.concoction.small_pink_pillow_block": "Small Pink Pillow",
+      "block.concoction.oak_kitchen_cabinet": "Oak Kitchen Cabinet",
       "item.minecraft.splash_potion.effect.snowflake": "Splash Potion of Snowflake",
       "item.minecraft.splash_potion.effect.blooming_buffed": "Splash Potion of Blooming",
       "advancements.cry_about_it.descr": "Drink obsidian tears and suffer the consequences of your decision",
@@ -7603,6 +7651,10 @@
       },
       {
         "name": "puffball",
+        "children": []
+      },
+      {
+        "name": "kitchen_cabinets",
         "children": []
       }
     ]
