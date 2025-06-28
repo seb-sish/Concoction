@@ -14,7 +14,8 @@ public class KitchenCabinetInterfaceScreen extends AbstractContainerScreen<Kitch
     private static final ResourceLocation texture = ResourceLocation.parse("concoction:textures/gui/hud/kitchen_cabinet_gui.png");
 
     public KitchenCabinetInterfaceScreen(KitchenCabinetInterfaceMenu container, Inventory inventory, Component text) {
-        super(container, inventory, text);
+        // Use a translatable component instead of raw text
+        super(container, inventory, Component.translatable("gui.concoction.kitchen_cabinet"));
         this.imageWidth = 176;
         this.imageHeight = 166;
     }
