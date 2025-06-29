@@ -31,6 +31,9 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
+
 
 import net.mcreator.concoction.world.inventory.KitchenCabinetInterfaceMenu;
 import net.mcreator.concoction.block.entity.OakKitchenCabinetBlockEntity;
@@ -123,6 +126,14 @@ public class OakKitchenCabinetBlock extends Block implements EntityBlock {
 			super.onRemove(state, world, pos, newState, isMoving);
 		}
 	}
+	
+	@Override
+	public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
+	    if (state.getValue(OPEN)) {
+	        level.setBlock(pos, state.setValue(OPEN, false), 3);
+	    }
+	}
+
 
 	@Override
 	public boolean hasAnalogOutputSignal(BlockState state) {
