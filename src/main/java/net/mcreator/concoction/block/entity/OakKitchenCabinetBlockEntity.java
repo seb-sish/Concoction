@@ -17,6 +17,9 @@ import net.minecraft.core.NonNullList;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
+import net.mcreator.concoction.block.OakKitchenCabinetBlock;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 
 import net.mcreator.concoction.world.inventory.KitchenCabinetInterfaceMenu;
 import net.mcreator.concoction.init.ConcoctionModBlockEntities;
@@ -78,6 +81,17 @@ public class OakKitchenCabinetBlockEntity extends RandomizableContainerBlockEnti
 	public Component getDefaultName() {
 		return Component.literal("oak_kitchen_cabinet");
 	}
+
+	public void onLoad() {
+	    super.onLoad();
+	
+	    if (!this.level.isClientSide) {
+	        this.level.getServer().execute(() -> {
+	            this.level.scheduleTick(this.getBlockPos(), this.getBlockState().getBlock(), 20); 
+	        });
+	    }
+	}
+
 
 	@Override
 	public int getMaxStackSize() {

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "concoction:spruce_kitchen_cabinet",
     "concoction:oak_kitchen_cabinet",
     "concoction:pinecone_block",
     "concoction:crop_mint",
