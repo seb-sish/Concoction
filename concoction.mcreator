@@ -6586,6 +6586,37 @@
         ]
       },
       "path": "~/kitchen_cabinets"
+    },
+    {
+      "name": "BirchKitchenCabinet",
+      "type": "block",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "birch_kitchen_cabinet",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/concoction/block/entity/BirchKitchenCabinetBlockEntity.java",
+          "src/main/resources/assets/concoction/blockstates/birch_kitchen_cabinet.json",
+          "src/main/resources/assets/concoction/models/item/birch_kitchen_cabinet.json",
+          "src/main/resources/data/concoction/loot_table/blocks/birch_kitchen_cabinet.json",
+          "src/main/java/net/mcreator/concoction/block/BirchKitchenCabinetBlock.java",
+          "src/main/resources/assets/concoction/models/block/birch_kitchen_cabinet.json"
+        ]
+      },
+      "path": "~/kitchen_cabinets"
+    },
+    {
+      "name": "BirchKitchenCabinetCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "birch_kitchen_cabinet_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/concoction/recipe/birch_kitchen_cabinet_craft.json"
+        ]
+      },
+      "path": "~/kitchen_cabinets"
     }
   ],
   "variable_elements": [],
@@ -6675,6 +6706,10 @@
       "~CUSTOM:CropPuffball",
       "~CUSTOM:WeightedSouls"
     ],
+    "BLOCKS:minecraft:tall_flowers": [
+      "CUSTOM:Mint",
+      "CUSTOM:Sunflower"
+    ],
     "BLOCKS:minecraft:mineable/hoe": [
       "~CUSTOM:ReapepperBlock",
       "~CUSTOM:SweetBerriesBlock",
@@ -6694,10 +6729,6 @@
       "~CUSTOM:CabbageBlock",
       "CUSTOM:SpicyPepperBlock",
       "CUSTOM:CornBlock"
-    ],
-    "BLOCKS:minecraft:tall_flowers": [
-      "CUSTOM:Mint",
-      "CUSTOM:Sunflower"
     ],
     "ITEMS:minecraft:flowers": [
       "CUSTOM:Mint",
@@ -6901,6 +6932,7 @@
       "TAG:concoction:butters"
     ],
     "BLOCKS:minecraft:mineable/axe": [
+      "~CUSTOM:BirchKitchenCabinet",
       "~CUSTOM:SpruceKitchenCabinet",
       "~CUSTOM:OakKitchenCabinet",
       "~CUSTOM:PineconeBlock",
@@ -7013,6 +7045,7 @@
       "item.concoction.puffball_spores": "Споры дождевика",
       "block.concoction.orange_pillow_block": "Оранжевая подушка",
       "block.concoction.green_pillow_block": "Зелёная подушка",
+      "block.concoction.birch_kitchen_cabinet": "Берёзовый кухонный шкаф",
       "block.concoction.onion_block": "Блок лука",
       "block.concoction.mint_bale": "Сноп мяты",
       "item.concoction.overgrown_shovel": "Цветущая лопата",
@@ -7286,9 +7319,9 @@
       "block.concoction.lime_pillow_block": "Lime Pillow",
       "block.concoction.beetroot_block": "Beetroot Block",
       "block.concoction.light_gray_woven_carpet": "Light Gray Woven Carpet",
-      "subtitles.butter_thickens": "Butter thickens",
-      "death.attack.spicy_damage": "%1$s thought they could handle the spice",
       "block.concoction.mint": "Mint",
+      "death.attack.spicy_damage": "%1$s thought they could handle the spice",
+      "subtitles.butter_thickens": "Butter thickens",
       "item.concoction.pinecone": "Pinecone",
       "item.concoction.corn_oil": "Corn Oil",
       "advancements.special_carpet.title": "Pretty (but) Pricy",
@@ -7298,15 +7331,15 @@
       "advancements.spicy_on_fire.title": "It Burns, Burns, Burns",
       "advancements.make_soul_soul.title": "Crop \u0027Til You Drop",
       "block.concoction.wild_potato": "Wild Potato",
-      "item.concoction.hashbrowns": "Hashbrowns",
       "item.concoction.cooked_corn": "Cooked Corn",
+      "item.concoction.hashbrowns": "Hashbrowns",
       "item.concoction.cream_bottle": "Cream Bottle",
       "item.concoction.cabbage_seeds": "Cabbage Seeds",
       "item.concoction.tomato": "Tomato",
       "advancements.new_crops.title": "That\u0027s Wild",
       "item.minecraft.tipped_arrow.effect.snowflake_extended": "Arrow of Snowflake",
-      "item.concoction.mint_cookie": "Mint Cookie",
       "block.concoction.chorus_block": "Chorus Block",
+      "item.concoction.mint_cookie": "Mint Cookie",
       "block.concoction.crop_onion": "Crop Onion",
       "block.concoction.small_blue_pillow_block": "Small Blue Pillow",
       "effect.concoction.fiery_touch": "Fiery Touch",
@@ -7327,6 +7360,7 @@
       "item.concoction.puffball_spores": "Puffball Spores",
       "block.concoction.orange_pillow_block": "Orange Pillow",
       "block.concoction.green_pillow_block": "Green Pillow",
+      "block.concoction.birch_kitchen_cabinet": "Oak Kitchen Cabinet",
       "block.concoction.onion_block": "Onion Block",
       "block.concoction.mint_bale": "Mint Bale",
       "item.concoction.overgrown_shovel": "Overgrown Shovel",

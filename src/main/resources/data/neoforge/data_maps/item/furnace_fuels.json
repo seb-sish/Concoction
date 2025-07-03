@@ -204,6 +204,15 @@
 	    },
 	    "concoction:small_black_pillow_block": {
 	        "burn_time": 300
+	    },
+	    "concoction:oak_kitchen_cabinet": {
+	        "burn_time": 300
+	    },
+	    "concoction:spruce_kitchen_cabinet": {
+	        "burn_time": 300
+	    },
+	    "concoction:birch_kitchen_cabinet": {
+	        "burn_time": 300
 	    }
         
     }
