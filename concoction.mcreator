@@ -6514,7 +6514,7 @@
     {
       "name": "OakKitchenCabinet",
       "type": "block",
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "oak_kitchen_cabinet",
       "metadata": {
@@ -6614,6 +6614,37 @@
       "metadata": {
         "files": [
           "src/main/resources/data/concoction/recipe/birch_kitchen_cabinet_craft.json"
+        ]
+      },
+      "path": "~/kitchen_cabinets"
+    },
+    {
+      "name": "AcaciaKitchenCabinet",
+      "type": "block",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "acacia_kitchen_cabinet",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/concoction/loot_table/blocks/acacia_kitchen_cabinet.json",
+          "src/main/resources/assets/concoction/models/item/acacia_kitchen_cabinet.json",
+          "src/main/java/net/mcreator/concoction/block/AcaciaKitchenCabinetBlock.java",
+          "src/main/resources/assets/concoction/models/block/acacia_kitchen_cabinet.json",
+          "src/main/java/net/mcreator/concoction/block/entity/AcaciaKitchenCabinetBlockEntity.java",
+          "src/main/resources/assets/concoction/blockstates/acacia_kitchen_cabinet.json"
+        ]
+      },
+      "path": "~/kitchen_cabinets"
+    },
+    {
+      "name": "AcaciaKitchenCabinetCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "acacia_kitchen_cabinet_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/concoction/recipe/acacia_kitchen_cabinet_craft.json"
         ]
       },
       "path": "~/kitchen_cabinets"
@@ -6843,6 +6874,12 @@
     "ENCHANTMENTS:minecraft:on_random_loot": [
       "~CUSTOM:Butchering"
     ],
+    "ITEMS:c:tableware": [
+      "Items.BUCKET",
+      "Items.GLASS_BOTTLE",
+      "Items.BOWL",
+      "Items.STICK"
+    ],
     "ITEMS:minecraft:head_armor": [
       "~CUSTOM:SunflowerCrown.helmet"
     ],
@@ -6932,6 +6969,7 @@
       "TAG:concoction:butters"
     ],
     "BLOCKS:minecraft:mineable/axe": [
+      "~CUSTOM:AcaciaKitchenCabinet",
       "~CUSTOM:BirchKitchenCabinet",
       "~CUSTOM:SpruceKitchenCabinet",
       "~CUSTOM:OakKitchenCabinet",
@@ -7099,6 +7137,7 @@
       "block.concoction.sea_salt_block": "Блок морской соли",
       "advancements.fall_pillow.descr": "Упади на подушку с высоты более ста блоков",
       "death.attack.soul_damage": "%1$s слился с душами",
+      "block.concoction.acacia_kitchen_cabinet": "Акациевый кухонный шкаф",
       "block.concoction.orange_woven_carpet": "Оранжевый тканый ковёр",
       "block.concoction.sweet_berries_block": "Блок брусники",
       "item.concoction.mint_chocolate_cake_slice": "Кусочек мятно-шоколадного торта",
@@ -7112,7 +7151,7 @@
       "block.concoction.red_woven_carpet": "Красный тканый ковёр",
       "block.concoction.crop_corn": "Кукуруза",
       "item.concoction.music_disc_hot_ice.desc": "??? - Hot Ice",
-      "taste.concoction.instability": "• Нестабильное",
+      "taste.concoction.instability": "• Искажающее",
       "block.concoction.wild_beetroot": "Дикая свекла",
       "item.concoction.overgrown_pickaxe": "Цветущая кирка",
       "item.concoction.sunstruck_spawn_egg": "Яйцо призыва выцвевшего",
@@ -7414,6 +7453,7 @@
       "block.concoction.sea_salt_block": "Sea Salt Block",
       "advancements.fall_pillow.descr": "Fall over a hundred blocks on pillow",
       "death.attack.soul_damage": "%1$s was consumed by souls",
+      "block.concoction.acacia_kitchen_cabinet": "Acacia Kitchen Cabinet",
       "block.concoction.orange_woven_carpet": "Orange Woven Carpet",
       "block.concoction.sweet_berries_block": "Lingonberry Block",
       "item.concoction.mint_chocolate_cake_slice": "Mint Chocolate Cake Slice",
@@ -7427,7 +7467,7 @@
       "block.concoction.red_woven_carpet": "Red Woven Carpet",
       "block.concoction.crop_corn": "Crop Corn",
       "item.concoction.music_disc_hot_ice.desc": "??? - Hot Ice",
-      "taste.concoction.instability": "• Warping",
+      "taste.concoction.instability": "• Twisted",
       "block.concoction.wild_beetroot": "Wild Beetroot",
       "item.concoction.overgrown_pickaxe": "Overgrown Pickaxe",
       "item.concoction.sunstruck_spawn_egg": "Sunstruck Spawn Egg",
@@ -7538,7 +7578,7 @@
       "item.concoction.cooked_rice": "Cooked Rice",
       "item.concoction.flour": "Flour",
       "item.concoction.overgrown_sword": "Overgrown Sword",
-      "taste.concoction.warming": "• Warming",
+      "taste.concoction.warming": "• Warm",
       "block.concoction.small_pink_pillow_block": "Small Pink Pillow",
       "block.concoction.oak_kitchen_cabinet": "Oak Kitchen Cabinet",
       "item.minecraft.splash_potion.effect.snowflake": "Splash Potion of Snowflake",

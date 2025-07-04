@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "concoction:acacia_kitchen_cabinet",
     "concoction:birch_kitchen_cabinet",
     "concoction:spruce_kitchen_cabinet",
     "concoction:oak_kitchen_cabinet",

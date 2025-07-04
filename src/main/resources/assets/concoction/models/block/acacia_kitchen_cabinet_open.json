@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "concoction:block/acacia_kitchen_cabinet_bottom",
+    "up": "concoction:block/acacia_kitchen_cabinet_top",
+    "north": "concoction:block/acacia_kitchen_cabinet_open",
+    "east": "concoction:block/acacia_kitchen_cabinet_side",
+    "south": "concoction:block/acacia_kitchen_cabinet_side",
+    "west": "concoction:block/acacia_kitchen_cabinet_side",
+    "particle": "concoction:block/acacia_kitchen_cabinet_bottom"
+  },
+  "render_type": "solid"
+}
