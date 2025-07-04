@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "concoction:block/oak_kitchen_cabinet_bottom",
-    "up": "concoction:block/oak_kitchen_cabinet_top",
-    "north": "concoction:block/oak_kitchen_cabinet_open",
-    "east": "concoction:block/oak_kitchen_cabinet_side",
-    "south": "concoction:block/oak_kitchen_cabinet_side",
-    "west": "concoction:block/oak_kitchen_cabinet_side",
-    "particle": "concoction:block/oak_kitchen_cabinet_bottom"
+    "down": "concoction:block/spruce_kitchen_cabinet_bottom",
+    "up": "concoction:block/spruce_kitchen_cabinet_top",
+    "north": "concoction:block/spruce_kitchen_cabinet_open",
+    "east": "concoction:block/spruce_kitchen_cabinet_side",
+    "south": "concoction:block/spruce_kitchen_cabinet_side",
+    "west": "concoction:block/spruce_kitchen_cabinet_side",
+    "particle": "concoction:block/spruce_kitchen_cabinet_bottom"
   },
   "render_type": "solid"
 }
