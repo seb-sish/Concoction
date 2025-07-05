@@ -15,7 +15,8 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import net.minecraft.sounds.SoundEvents;
+
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 
 @Mixin(Cow.class)
@@ -43,12 +44,8 @@ public class CowMixin implements ICowMilkLevel {
 	    Cow cow = (Cow)(Object)this;
 	    Level level = cow.level();
 	    long now = level.getGameTime();
-	
-	    // Prevent milking baby cows
+
 	    if (cow.isBaby()) {
-	        if (level.isClientSide) {
-	            player.displayClientMessage(Component.translatable("message.concoction.cow_is_baby"), true);
-	        }
 	        cir.setReturnValue(InteractionResult.FAIL);
 	        return;
 	    }

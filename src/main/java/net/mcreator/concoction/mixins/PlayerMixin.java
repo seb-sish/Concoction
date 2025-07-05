@@ -10,8 +10,10 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import org.spongepowered.asm.mixin.Mixin;
@@ -20,6 +22,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.Objects;
 
@@ -51,6 +54,20 @@ public abstract class PlayerMixin implements IPlayerUnsuccessfulAttempts {
     }
 
 
+
+    @Inject(method = "eat", at = @At("RETURN"))
+    private void concoction$applySaltnessFoodBoost(Level p_36185_, ItemStack pFood, FoodProperties p_347562_, CallbackInfoReturnable<ItemStack> cir) {
+        Player player = (Player) (Object) this;
+        MobEffectInstance saltnessEffect = player.getEffect(ConcoctionModMobEffects.SALTNESS);
+
+        if (saltnessEffect != null) {
+            TagKey<Item> drinkTag = TagKey.create(Registries.ITEM, ResourceLocation.parse("c:foods/drink"));
+            if (pFood.is(drinkTag)) {
+                int amplifier = saltnessEffect.getAmplifier();
+                player.getFoodData().eat(2, 3.0F + amplifier);
+            }
+        }
+    }
 
     @Redirect(method = "eat", at = @At(value = "INVOKE",
                                     target = "Lnet/minecraft/world/level/Level;playSound(Lnet/minecraft/world/entity/player/Player;DDDLnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FF)V"))
