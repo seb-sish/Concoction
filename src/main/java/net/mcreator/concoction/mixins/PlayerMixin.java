@@ -56,18 +56,29 @@ public abstract class PlayerMixin implements IPlayerUnsuccessfulAttempts {
 
 
     @Inject(method = "eat", at = @At("RETURN"))
-    private void concoction$applySaltnessFoodBoost(Level p_36185_, ItemStack pFood, FoodProperties p_347562_, CallbackInfoReturnable<ItemStack> cir) {
-        Player player = (Player) (Object) this;
-        MobEffectInstance saltnessEffect = player.getEffect(ConcoctionModMobEffects.SALTNESS);
+private void concoction$applySaltnessFoodBoost(Level pLevel, ItemStack pFood, FoodProperties pFoodProperties, CallbackInfoReturnable<ItemStack> cir) {
+    Player player = (Player) (Object) this;
+    MobEffectInstance saltnessEffect = player.getEffect(ConcoctionModMobEffects.SALTNESS);
 
-        if (saltnessEffect != null) {
-            TagKey<Item> drinkTag = TagKey.create(Registries.ITEM, ResourceLocation.parse("c:foods/drink"));
-            if (pFood.is(drinkTag)) {
-                int amplifier = saltnessEffect.getAmplifier();
-                player.getFoodData().eat(2, 3.0F + amplifier);
-            }
+    if (saltnessEffect != null) {
+        TagKey<Item> drinkTag = TagKey.create(Registries.ITEM, ResourceLocation.parse("c:foods/drink"));
+
+        if (pFood.is(drinkTag)) {
+            int amplifier = saltnessEffect.getAmplifier();
+            int hungerBonus = 2;
+            float saturationBonus = 3.0F + (amplifier * 1.5F); // Scale saturation
+
+            // Increase hunger
+            player.getFoodData().eat(hungerBonus, 0); // 0 = no saturation added via this method
+
+            // Add scaled saturation manually
+            float currentSaturation = player.getFoodData().getSaturationLevel();
+            float newSaturation = Math.min(currentSaturation + saturationBonus, 20.0F);
+            player.getFoodData().setSaturation(newSaturation);
         }
     }
+}
+
 
     @Redirect(method = "eat", at = @At(value = "INVOKE",
                                     target = "Lnet/minecraft/world/level/Level;playSound(Lnet/minecraft/world/entity/player/Player;DDDLnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FF)V"))

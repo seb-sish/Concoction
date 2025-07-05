@@ -16,7 +16,6 @@
     "LightningBoltMixin",
     "LivingEntityMixin",
     "PlayerMixin",
-    "PotionItemMixin",
     "ZombieMixin"
   ],
   "client": [
